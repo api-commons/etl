@@ -1,0 +1,72 @@
+provider: oracle-goldengate
+apis_io: https://apis.io/providers/oracle-goldengate/
+context: etl
+generated: '2026-11-11'
+concepts:
+  source:
+    path_segment:
+    - sources
+    properties:
+      name: name
+      status: status
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/oracle-goldengate-big-data-rest-api-openapi.yml#DELETE /services/v2/sources/{distpath}
+    - openapi/_original/oracle-goldengate-big-data-rest-api-openapi.yml#GET /services/v2/sources
+    - openapi/_original/oracle-goldengate-big-data-rest-api-openapi.yml#GET /services/v2/sources/{distpath}
+    - openapi/_original/oracle-goldengate-big-data-rest-api-openapi.yml#POST /services/v2/sources/{distpath}
+    - openapi/_original/oracle-goldengate-rest-api-openapi.yml#DELETE /services/v2/sources/{distpath}
+  destination:
+    path_segment:
+    - targets
+    properties:
+      name: name
+      status: status
+    core_coverage: 0.2
+    evidence:
+    - openapi/_original/oracle-goldengate-rest-api-openapi.yml#DELETE /services/v2/targets/{path}
+    - openapi/_original/oracle-goldengate-rest-api-openapi.yml#GET /services/v2/targets
+    - openapi/_original/oracle-goldengate-rest-api-openapi.yml#GET /services/v2/targets/{path}
+    - openapi/_original/oracle-goldengate-rest-api-openapi.yml#PATCH /services/v2/targets/{path}
+    - openapi/_original/oracle-goldengate-rest-api-openapi.yml#POST /services/v2/targets/{path}
+  data_pipeline:
+    path_segment:
+    - connections
+    - pipelines
+    - connection
+    properties:
+      id: id
+      name:
+      - displayName
+      - name
+      type: type
+      created_at: createdAt
+      description: description
+      updated_at: updatedAt
+      status: status
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/oracle-goldengate-cloud-service-api-openapi.yml#DELETE /20200407/connections/{connectionId}
+    - openapi/_original/oracle-goldengate-cloud-service-api-openapi.yml#DELETE /20200407/pipelines/{pipelineId}
+    - openapi/_original/oracle-goldengate-cloud-service-api-openapi.yml#GET /20200407/connections
+    - openapi/_original/oracle-goldengate-cloud-service-api-openapi.yml#GET /20200407/connections/{connectionId}
+    - openapi/_original/oracle-goldengate-cloud-service-api-openapi.yml#GET /20200407/pipelines
+  sync_job:
+    path_segment:
+    - jobs
+    properties:
+      status: status
+      id:
+      - id
+      - jobId
+      finished_at: endTime
+      started_at: startTime
+      name: name
+      run_id: runId
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/oracle-goldengate-veridata-rest-api-openapi.yml#DELETE /services/configuration/jobs/{Id}
+    - openapi/_original/oracle-goldengate-veridata-rest-api-openapi.yml#GET /services/configuration/jobs
+    - openapi/_original/oracle-goldengate-veridata-rest-api-openapi.yml#GET /services/configuration/jobs/{Id}
+    - openapi/_original/oracle-goldengate-veridata-rest-api-openapi.yml#GET /services/monitoring/jobs
+    - openapi/_original/oracle-goldengate-veridata-rest-api-openapi.yml#GET /services/monitoring/repair/jobs

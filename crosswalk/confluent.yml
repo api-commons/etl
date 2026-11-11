@@ -1,0 +1,21 @@
+provider: confluent
+apis_io: https://apis.io/providers/confluent/
+context: etl
+generated: '2026-11-11'
+concepts:
+  data_pipeline:
+    path_segment:
+    - connections
+    - connectors
+    properties:
+      name: name
+      type: type
+      status: status
+      config: config
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/confluent-cloud-full.yaml#DELETE /connect/v1/environments/{environment_id}/clusters/{kafka_cluster_id}/connectors/{connector_name}
+    - openapi/_original/confluent-cloud-full.yaml#DELETE /sql/v1/organizations/{organization_id}/environments/{environment_id}/connections/{connection_name}
+    - openapi/_original/confluent-cloud-full.yaml#GET /connect/v1/environments/{environment_id}/clusters/{kafka_cluster_id}/connectors
+    - openapi/_original/confluent-cloud-full.yaml#GET /connect/v1/environments/{environment_id}/clusters/{kafka_cluster_id}/connectors/{connector_name}
+    - openapi/_original/confluent-cloud-full.yaml#GET /sql/v1/organizations/{organization_id}/environments/{environment_id}/connections

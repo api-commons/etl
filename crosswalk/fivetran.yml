@@ -1,0 +1,36 @@
+provider: fivetran
+apis_io: https://apis.io/providers/fivetran/
+context: etl
+generated: '2026-11-11'
+concepts:
+  destination:
+    path_segment:
+    - destinations
+    properties:
+      destination_type: service
+      configuration: config
+    core_coverage: 0.4
+    evidence:
+    - openapi/_original/fivetran-openapi.yml#DELETE /destinations/{destinationId}
+    - openapi/_original/fivetran-openapi.yml#GET /destinations/{destinationId}
+    - openapi/_original/fivetran-openapi.yml#PATCH /destinations/{destinationId}
+    - openapi/_original/fivetran-openapi.yml#POST /destinations
+  data_pipeline:
+    path_segment:
+    - connections
+    properties:
+      config: config
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/fivetran-openapi.yml#DELETE /connections/{connectionId}
+    - openapi/_original/fivetran-openapi.yml#GET /connections
+    - openapi/_original/fivetran-openapi.yml#GET /connections/{connectionId}
+    - openapi/_original/fivetran-openapi.yml#PATCH /connections/{connectionId}
+    - openapi/_original/fivetran-openapi.yml#POST /connections
+  sync_job:
+    path_segment:
+    - sync
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/fivetran-openapi.yml#POST /connections/{connectionId}/sync

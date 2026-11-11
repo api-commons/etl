@@ -1,0 +1,35 @@
+provider: rivery
+apis_io: https://apis.io/providers/rivery/
+context: etl
+generated: '2026-11-11'
+concepts:
+  source:
+    path_segment:
+    - source
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/rivery-openapi.json#POST /v1/accounts/{account_id}/users/{user_id}/source
+  data_pipeline:
+    path_segment:
+    - connections
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/rivery-openapi.json#DELETE /v1/accounts/{account_id}/environments/{environment_id}/connections/{connection_cross_id}
+    - openapi/_original/rivery-openapi.json#GET /v1/accounts/{account_id}/environments/{environment_id}/connections
+    - openapi/_original/rivery-openapi.json#POST /v1/accounts/{account_id}/environments/{environment_id}/connections
+    - openapi/_original/rivery-openapi.json#PUT /v1/accounts/{account_id}/environments/{environment_id}/connections/{cross_id}
+  sync_job:
+    path_segment:
+    - runs
+    - run
+    properties:
+      status: status
+      run_id: run_id
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/rivery-openapi.json#GET /v1/accounts/{account_id}/environments/{environment_id}/rivers/{river_cross_id}/runs
+    - openapi/_original/rivery-openapi.json#GET /v1/accounts/{account_id}/environments/{environment_id}/rivers/{river_cross_id}/runs/{run_id}
+    - openapi/_original/rivery-openapi.json#POST /v1/accounts/{account_id}/environments/{environment_id}/rivers/{river_cross_id}/run
+    - openapi/_original/rivery-openapi.json#POST /v1/accounts/{account_id}/environments/{environment_id}/rivers/{river_cross_id}/sub_rivers/{sub_river_id}/run

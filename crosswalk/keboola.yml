@@ -1,0 +1,47 @@
+provider: keboola
+apis_io: https://apis.io/providers/keboola/
+context: etl
+generated: '2026-11-11'
+concepts:
+  source:
+    path_segment:
+    - sources
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/keboola-stream-api-openapi.yml#DELETE /v1/branches/{branchId}/sources/{sourceId}
+    - openapi/_original/keboola-stream-api-openapi.yml#GET /v1/branches/{branchId}/aggregation/sources
+    - openapi/_original/keboola-stream-api-openapi.yml#GET /v1/branches/{branchId}/sources
+    - openapi/_original/keboola-stream-api-openapi.yml#GET /v1/branches/{branchId}/sources/{sourceId}
+    - openapi/_original/keboola-stream-api-openapi.yml#PATCH /v1/branches/{branchId}/sources/{sourceId}
+  destination:
+    path_segment:
+    - sinks
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/keboola-stream-api-openapi.yml#DELETE /v1/branches/{branchId}/sources/{sourceId}/sinks/{sinkId}
+    - openapi/_original/keboola-stream-api-openapi.yml#GET /v1/branches/{branchId}/sources/{sourceId}/sinks
+    - openapi/_original/keboola-stream-api-openapi.yml#GET /v1/branches/{branchId}/sources/{sourceId}/sinks/{sinkId}
+    - openapi/_original/keboola-stream-api-openapi.yml#PATCH /v1/branches/{branchId}/sources/{sourceId}/sinks/{sinkId}
+    - openapi/_original/keboola-stream-api-openapi.yml#POST /v1/branches/{branchId}/sources/{sourceId}/sinks
+  sync_job:
+    path_segment:
+    - jobs
+    - job
+    properties:
+      status: status
+      id:
+      - jobId
+      - id
+      finished_at: endTime
+      started_at: startTime
+      type: type
+      run_id: runId
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/keboola-billing-api-openapi.yml#PUT /duration/job
+    - openapi/_original/keboola-queue-api-openapi.yml#GET /jobs
+    - openapi/_original/keboola-queue-api-openapi.yml#GET /jobs/{jobId}
+    - openapi/_original/keboola-queue-api-openapi.yml#GET /search/jobs
+    - openapi/_original/keboola-queue-api-openapi.yml#POST /jobs

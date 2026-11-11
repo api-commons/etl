@@ -1,0 +1,50 @@
+provider: precog
+apis_io: https://apis.io/providers/precog/
+context: etl
+generated: '2026-11-11'
+concepts:
+  source:
+    path_segment:
+    - sources
+    - source
+    properties:
+      name: name
+      id: id
+      configuration: config
+      status: status
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/precog-public-http-api-openapi.yaml#DELETE /sources/{source-id}
+    - openapi/_original/precog-public-http-api-openapi.yaml#GET /kinds/source
+    - openapi/_original/precog-public-http-api-openapi.yaml#GET /sources
+    - openapi/_original/precog-public-http-api-openapi.yaml#GET /sources/{source-id}
+    - openapi/_original/precog-public-http-api-openapi.yaml#POST /sources
+  destination:
+    path_segment:
+    - destinations
+    - destination
+    properties:
+      name: name
+      id: id
+      configuration: config
+      status: status
+    core_coverage: 0.6
+    evidence:
+    - openapi/_original/precog-public-http-api-openapi.yaml#GET /destinations
+    - openapi/_original/precog-public-http-api-openapi.yaml#GET /destinations/{destination-id}
+    - openapi/_original/precog-public-http-api-openapi.yaml#GET /kinds/destination
+    - openapi/_original/precog-public-http-api-openapi.yaml#POST /destinations
+    - openapi/_original/precog-public-http-api-openapi.yaml#PUT /destinations/{destination-id}
+  data_pipeline:
+    path_segment:
+    - pipelines
+    properties:
+      id: id
+      name: name
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/precog-public-http-api-openapi.yaml#DELETE /pipelines/{pipeline-id}
+    - openapi/_original/precog-public-http-api-openapi.yaml#DELETE /sources/{source-id}/pipelines/{pipeline-id}
+    - openapi/_original/precog-public-http-api-openapi.yaml#GET /pipelines
+    - openapi/_original/precog-public-http-api-openapi.yaml#GET /pipelines/{pipeline-id}
+    - openapi/_original/precog-public-http-api-openapi.yaml#POST /pipelines

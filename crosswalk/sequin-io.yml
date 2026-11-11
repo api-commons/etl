@@ -1,0 +1,19 @@
+provider: sequin-io
+apis_io: https://apis.io/providers/sequin-io/
+context: etl
+generated: '2026-11-11'
+concepts:
+  destination:
+    path_segment:
+    - sinks
+    properties:
+      name: name
+      id: id
+      status: status
+    core_coverage: 0.4
+    evidence:
+    - openapi/_original/sequin-io-openapi.yml#DELETE /sinks/{id_or_name}
+    - openapi/_original/sequin-io-openapi.yml#GET /sinks
+    - openapi/_original/sequin-io-openapi.yml#GET /sinks/{id_or_name}
+    - openapi/_original/sequin-io-openapi.yml#PATCH /sinks/{id_or_name}
+    - openapi/_original/sequin-io-openapi.yml#POST /sinks

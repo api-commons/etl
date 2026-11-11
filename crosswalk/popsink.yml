@@ -1,0 +1,19 @@
+provider: popsink
+apis_io: https://apis.io/providers/popsink/
+context: etl
+generated: '2026-11-11'
+concepts:
+  data_pipeline:
+    path_segment:
+    - pipelines
+    properties:
+      id: id
+      name: name
+      status: state
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/popsink-onprem-api-openapi-original.json#DELETE /pipelines/{pipeline_id}
+    - openapi/_original/popsink-onprem-api-openapi-original.json#GET /pipelines/
+    - openapi/_original/popsink-onprem-api-openapi-original.json#GET /pipelines/{pipeline_id}
+    - openapi/_original/popsink-onprem-api-openapi-original.json#PATCH /pipelines/{pipeline_id}
+    - openapi/_original/popsink-onprem-api-openapi-original.json#POST /pipelines/

@@ -1,0 +1,29 @@
+provider: prophecyio
+apis_io: https://apis.io/providers/prophecyio/
+context: etl
+generated: '2026-11-11'
+concepts:
+  data_pipeline:
+    path_segment:
+    - connection
+    - pipeline
+    properties:
+      id: id
+      name: name
+      created_at: createdAt
+      updated_at: updatedAt
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/prophecyio-connections-openapi.json#GET /api/orchestration/fabric/{fabricId}/connection
+    - openapi/_original/prophecyio-connections-openapi.json#POST /api/orchestration/fabric/{fabricId}/connection
+    - openapi/_original/prophecyio-pipelines-openapi.json#GET /api/trigger/pipeline/{runId}
+    - openapi/_original/prophecyio-pipelines-openapi.json#POST /api/trigger/pipeline
+  sync_job:
+    path_segment:
+    - run
+    properties:
+      status: status
+      name: name
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/prophecyio-pipelines-openapi.json#POST /api/orchestration/tests/run

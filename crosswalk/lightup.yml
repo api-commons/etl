@@ -1,0 +1,20 @@
+provider: lightup
+apis_io: https://apis.io/providers/lightup/
+context: etl
+generated: '2026-11-11'
+concepts:
+  source:
+    path_segment:
+    - sources
+    properties:
+      configuration: config
+      status: status
+      source_type: type
+      metadata: metadata
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/lightup-dashboard-openapi.json#DELETE /api/{api_version}/ws/{workspace_id}/sources/{source_uuid}
+    - openapi/_original/lightup-dashboard-openapi.json#GET /api/{api_version}/ws/{workspace_id}/sources/
+    - openapi/_original/lightup-dashboard-openapi.json#GET /api/{api_version}/ws/{workspace_id}/sources/{source_uuid}
+    - openapi/_original/lightup-dashboard-openapi.json#POST /api/{api_version}/ws/{workspace_id}/sources/
+    - openapi/_original/lightup-dashboard-openapi.json#PUT /api/{api_version}/ws/{workspace_id}/sources/{source_uuid}

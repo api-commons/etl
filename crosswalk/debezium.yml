@@ -1,0 +1,18 @@
+provider: debezium
+apis_io: https://apis.io/providers/debezium/
+context: etl
+generated: '2026-11-11'
+concepts:
+  data_pipeline:
+    path_segment:
+    - connectors
+    properties:
+      name: name
+      type: type
+      config: config
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/debezium-connect.yml#DELETE /connectors/{connector}
+    - openapi/_original/debezium-connect.yml#GET /connectors
+    - openapi/_original/debezium-connect.yml#GET /connectors/{connector}
+    - openapi/_original/debezium-connect.yml#POST /connectors

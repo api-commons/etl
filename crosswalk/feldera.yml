@@ -1,0 +1,27 @@
+provider: feldera
+apis_io: https://apis.io/providers/feldera/
+context: etl
+generated: '2026-11-11'
+concepts:
+  data_pipeline:
+    path_segment:
+    - pipelines
+    properties:
+      id: id
+      name: name
+      created_at: created_at
+      description: description
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/feldera-openapi-original.json#DELETE /v0/pipelines/{pipeline_name}
+    - openapi/_original/feldera-openapi-original.json#GET /v0/pipelines
+    - openapi/_original/feldera-openapi-original.json#GET /v0/pipelines/{pipeline_name}
+    - openapi/_original/feldera-openapi-original.json#PATCH /v0/pipelines/{pipeline_name}
+    - openapi/_original/feldera-openapi-original.json#POST /v0/pipelines
+  sync_job:
+    path_segment:
+    - sync
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/feldera-openapi-original.json#POST /v0/pipelines/{pipeline_name}/checkpoint/sync

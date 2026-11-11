@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/etl/main/schema/destination.json",
+  "title": "Destination",
+  "description": "The common destination in Data Integration and ETL, distilled from 10 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.9,
+      "x-commons-providers": 9,
+      "x-commons-spellings": [
+        "name",
+        "title",
+        "display_name"
+      ]
+    },
+    "id": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.7,
+      "x-commons-providers": 7,
+      "x-commons-spellings": [
+        "id",
+        "sourceId"
+      ]
+    },
+    "destination_type": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.6,
+      "x-commons-providers": 6,
+      "x-commons-spellings": [
+        "type",
+        "service"
+      ]
+    },
+    "configuration": {
+      "type": "object",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.5,
+      "x-commons-providers": 5,
+      "x-commons-spellings": [
+        "config",
+        "configuration",
+        "settings"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.5,
+      "x-commons-providers": 5,
+      "x-commons-spellings": [
+        "created_at",
+        "createdAt",
+        "create_time"
+      ],
+      "format": "date-time"
+    },
+    "status": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.4,
+      "x-commons-providers": 4,
+      "x-commons-spellings": [
+        "status"
+      ]
+    },
+    "updated_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.4,
+      "x-commons-providers": 4,
+      "x-commons-spellings": [
+        "updated_at",
+        "updatedAt",
+        "update_time"
+      ],
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "x-commons": {
+    "context": "etl",
+    "concept": "destination",
+    "providers": 10,
+    "generated": "2026-11-11",
+    "version": "0.1.0-draft.20261111",
+    "status": "draft"
+  }
+}

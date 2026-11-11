@@ -1,0 +1,23 @@
+provider: pingcap
+apis_io: https://apis.io/providers/pingcap/
+context: etl
+generated: '2026-11-11'
+concepts:
+  source:
+    path_segment:
+    - sources
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/pingcap-tidb-dm-openapi-original.yaml#DELETE /api/v1/sources/{source-name}
+    - openapi/_original/pingcap-tidb-dm-openapi-original.yaml#GET /api/v1/sources
+    - openapi/_original/pingcap-tidb-dm-openapi-original.yaml#GET /api/v1/sources/{source-name}
+    - openapi/_original/pingcap-tidb-dm-openapi-original.yaml#POST /api/v1/sources
+    - openapi/_original/pingcap-tidb-dm-openapi-original.yaml#PUT /api/v1/sources/{source-name}
+  sync_job:
+    path_segment:
+    - jobs
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/tidb-chat2data-api-openapi.yml#GET /v2/jobs/{job_id}

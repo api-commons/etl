@@ -1,0 +1,5234 @@
+{
+ "cohort_size": 101,
+ "unreadable": [],
+ "concepts": {
+  "source": {
+   "airweave": {
+    "segments": [
+     "sources"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "name": "string",
+     "description": [
+      "string",
+      "null"
+     ],
+     "auth_methods": [
+      "array",
+      "null"
+     ],
+     "oauth_type": [
+      "string",
+      "null"
+     ],
+     "requires_byoc": "boolean",
+     "auth_config_class": [
+      "string",
+      "null"
+     ],
+     "config_class": [
+      "string",
+      "null"
+     ],
+     "short_name": "string",
+     "class_name": "string",
+     "output_entity_definitions": "array",
+     "labels": [
+      "array",
+      "null"
+     ],
+     "supports_continuous": "boolean",
+     "federated_search": "boolean",
+     "supports_temporal_relevance": "boolean",
+     "supports_access_control": "boolean",
+     "rate_limit_level": [
+      "string",
+      "null"
+     ],
+     "feature_flag": [
+      "string",
+      "null"
+     ],
+     "supports_browse_tree": "boolean",
+     "auth_fields": null,
+     "config_fields": "object",
+     "supported_auth_providers": [
+      "array",
+      "null"
+     ]
+    },
+    "evidence": [
+     "openapi/_original/airweave-openapi.json#GET /sources",
+     "openapi/_original/airweave-openapi.json#GET /sources/{short_name}"
+    ]
+   },
+   "boomi": {
+    "segments": [
+     "sources"
+    ],
+    "operations": [
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "name": "string",
+     "description": "string",
+     "createdDate": "string"
+    },
+    "evidence": [
+     "openapi/_original/boomi-datahub-api-openapi.yml#GET /repositories/{repositoryId}/sources",
+     "openapi/_original/boomi-datahub-api-openapi.yml#POST /repositories/{repositoryId}/sources"
+    ]
+   },
+   "census": {
+    "segments": [
+     "sources"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "status": "string",
+     "data": "array",
+     "pagination": "object",
+     "id": "integer",
+     "name": "string",
+     "type": "string",
+     "credentials": "object",
+     "created_at": "string"
+    },
+    "evidence": [
+     "openapi/_original/census-openapi.yml#DELETE /sources/{id}",
+     "openapi/_original/census-openapi.yml#GET /sources",
+     "openapi/_original/census-openapi.yml#GET /sources/{id}",
+     "openapi/_original/census-openapi.yml#PATCH /sources/{id}",
+     "openapi/_original/census-openapi.yml#POST /sources"
+    ]
+   },
+   "hightouch": {
+    "segments": [
+     "sources"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "number",
+     "name": "string",
+     "slug": "string",
+     "workspaceId": "number",
+     "createdAt": "string",
+     "updatedAt": "string",
+     "configuration": "object",
+     "type": "string"
+    },
+    "evidence": [
+     "openapi/_original/hightouch-openapi.json#GET /sources",
+     "openapi/_original/hightouch-openapi.json#GET /sources/{sourceId}",
+     "openapi/_original/hightouch-openapi.json#PATCH /sources/{sourceId}",
+     "openapi/_original/hightouch-openapi.json#POST /sources"
+    ]
+   },
+   "infoworks": {
+    "segments": [
+     "sources"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "limit": "integer",
+     "offset": "integer",
+     "links": "object",
+     "total_count": "integer",
+     "message": "string",
+     "id": "string",
+     "name": "string",
+     "type": "string",
+     "sub_type": "string",
+     "data_lake_path": "string",
+     "use_staging_schema_for_infoworks_managed_tables": "boolean",
+     "use_staging_dataset_for_infoworks_managed_tables": "boolean",
+     "description": "string",
+     "tags": "array",
+     "data_lake_schema": "string",
+     "state": "string",
+     "is_source_ingested": "boolean",
+     "is_public": "boolean",
+     "created_at": "string",
+     "created_by": "string",
+     "modified_at": "string",
+     "modified_by": "string",
+     "tables": "array",
+     "environment": "object",
+     "ephemeral_compute": "array",
+     "interactive_compute": "array",
+     "storage": "array",
+     "environment_id": "string",
+     "storage_id": "string",
+     "is_generic_jdbc_source_type": "boolean",
+     "is_oem_connector": "boolean",
+     "connection": null
+    },
+    "evidence": [
+     "openapi/_original/infoworks-rest-api-v3-openapi.yml#DELETE /sources/{source_id}",
+     "openapi/_original/infoworks-rest-api-v3-openapi.yml#GET /sources",
+     "openapi/_original/infoworks-rest-api-v3-openapi.yml#GET /sources/{source_id}",
+     "openapi/_original/infoworks-rest-api-v3-openapi.yml#PATCH /sources/{source_id}",
+     "openapi/_original/infoworks-rest-api-v3-openapi.yml#POST /sources"
+    ]
+   },
+   "keboola": {
+    "segments": [
+     "sources"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/keboola-stream-api-openapi.yml#DELETE /v1/branches/{branchId}/sources/{sourceId}",
+     "openapi/_original/keboola-stream-api-openapi.yml#GET /v1/branches/{branchId}/aggregation/sources",
+     "openapi/_original/keboola-stream-api-openapi.yml#GET /v1/branches/{branchId}/sources",
+     "openapi/_original/keboola-stream-api-openapi.yml#GET /v1/branches/{branchId}/sources/{sourceId}",
+     "openapi/_original/keboola-stream-api-openapi.yml#PATCH /v1/branches/{branchId}/sources/{sourceId}",
+     "openapi/_original/keboola-stream-api-openapi.yml#POST /v1/branches/{branchId}/sources"
+    ]
+   },
+   "lightup": {
+    "segments": [
+     "sources"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "apiVersion": null,
+     "config": null,
+     "metadata": null,
+     "status": null,
+     "type": "string"
+    },
+    "evidence": [
+     "openapi/_original/lightup-dashboard-openapi.json#DELETE /api/{api_version}/ws/{workspace_id}/sources/{source_uuid}",
+     "openapi/_original/lightup-dashboard-openapi.json#GET /api/{api_version}/ws/{workspace_id}/sources/",
+     "openapi/_original/lightup-dashboard-openapi.json#GET /api/{api_version}/ws/{workspace_id}/sources/{source_uuid}",
+     "openapi/_original/lightup-dashboard-openapi.json#POST /api/{api_version}/ws/{workspace_id}/sources/",
+     "openapi/_original/lightup-dashboard-openapi.json#PUT /api/{api_version}/ws/{workspace_id}/sources/{source_uuid}"
+    ]
+   },
+   "oracle-goldengate": {
+    "segments": [
+     "sources"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST item"
+    ],
+    "properties": {
+     "name": "string",
+     "status": "string",
+     "source": "string",
+     "target": "string",
+     "targetType": "string",
+     "ruleName": "string"
+    },
+    "evidence": [
+     "openapi/_original/oracle-goldengate-big-data-rest-api-openapi.yml#DELETE /services/v2/sources/{distpath}",
+     "openapi/_original/oracle-goldengate-big-data-rest-api-openapi.yml#GET /services/v2/sources",
+     "openapi/_original/oracle-goldengate-big-data-rest-api-openapi.yml#GET /services/v2/sources/{distpath}",
+     "openapi/_original/oracle-goldengate-big-data-rest-api-openapi.yml#POST /services/v2/sources/{distpath}",
+     "openapi/_original/oracle-goldengate-rest-api-openapi.yml#DELETE /services/v2/sources/{distpath}",
+     "openapi/_original/oracle-goldengate-rest-api-openapi.yml#GET /services/v2/sources",
+     "openapi/_original/oracle-goldengate-rest-api-openapi.yml#GET /services/v2/sources/{distpath}",
+     "openapi/_original/oracle-goldengate-rest-api-openapi.yml#PATCH /services/v2/sources/{distpath}",
+     "openapi/_original/oracle-goldengate-rest-api-openapi.yml#POST /services/v2/sources/{distpath}"
+    ]
+   },
+   "pingcap": {
+    "segments": [
+     "sources"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "source_name": "string",
+     "host": "string",
+     "port": "integer",
+     "user": "string",
+     "password": "string",
+     "enable_gtid": "boolean",
+     "enable": "boolean",
+     "flavor": "string",
+     "task_name_list": "array",
+     "security": "object",
+     "purge": "object",
+     "status_list": "array",
+     "relay_config": "object",
+     "source": "object",
+     "worker_name": "string"
+    },
+    "evidence": [
+     "openapi/_original/pingcap-tidb-dm-openapi-original.yaml#DELETE /api/v1/sources/{source-name}",
+     "openapi/_original/pingcap-tidb-dm-openapi-original.yaml#GET /api/v1/sources",
+     "openapi/_original/pingcap-tidb-dm-openapi-original.yaml#GET /api/v1/sources/{source-name}",
+     "openapi/_original/pingcap-tidb-dm-openapi-original.yaml#POST /api/v1/sources",
+     "openapi/_original/pingcap-tidb-dm-openapi-original.yaml#PUT /api/v1/sources/{source-name}"
+    ]
+   },
+   "polytomic": {
+    "segments": [
+     "source"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "configuration": "object",
+     "items": [
+      "object",
+      "null"
+     ],
+     "requires_one_of": [
+      "array",
+      "null"
+     ],
+     "capabilities": "object",
+     "schemas": [
+      "array",
+      "null"
+     ]
+    },
+    "evidence": [
+     "openapi/_original/polytomic-openapi.json#GET /api/connections/{id}/bulksync/source",
+     "openapi/_original/polytomic-openapi.json#GET /api/connections/{id}/modelsync/source"
+    ]
+   },
+   "precog": {
+    "segments": [
+     "sources",
+     "source"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "id": "string",
+     "kindId": "string",
+     "name": "string",
+     "config": "array",
+     "auth": "object",
+     "status": "object",
+     "image": "string"
+    },
+    "evidence": [
+     "openapi/_original/precog-public-http-api-openapi.yaml#DELETE /sources/{source-id}",
+     "openapi/_original/precog-public-http-api-openapi.yaml#GET /kinds/source",
+     "openapi/_original/precog-public-http-api-openapi.yaml#GET /sources",
+     "openapi/_original/precog-public-http-api-openapi.yaml#GET /sources/{source-id}",
+     "openapi/_original/precog-public-http-api-openapi.yaml#POST /sources",
+     "openapi/_original/precog-public-http-api-openapi.yaml#PUT /sources/{source-id}"
+    ]
+   },
+   "qliksense": {
+    "segments": [
+     "source",
+     "sources"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "data": "array",
+     "links": "object",
+     "id": "string",
+     "source": "string",
+     "target": "string",
+     "metadata": "object",
+     "relation": "string"
+    },
+    "evidence": [
+     "openapi/_original/qliksense-audits.json#GET /api/v1/audits/sources",
+     "openapi/_original/qliksense-automl-predictions.json#GET /api/v1/automl-predictions/{predictionId}/source",
+     "openapi/_original/qliksense-lineage-graphs.json#GET /api/v1/lineage-graphs/impact/{id}/source"
+    ]
+   },
+   "rivery": {
+    "segments": [
+     "source"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "source": null
+    },
+    "evidence": [
+     "openapi/_original/rivery-openapi.json#POST /v1/accounts/{account_id}/users/{user_id}/source"
+    ]
+   },
+   "segment": {
+    "segments": [
+     "sources"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "name": "string",
+     "catalog_name": "string",
+     "parent": "string",
+     "write_keys": "array",
+     "library_config": "object",
+     "create_time": "string",
+     "source": "object",
+     "id": "string",
+     "slug": "string",
+     "enabled": "boolean",
+     "writeKeys": "array",
+     "metadata": "object",
+     "settings": "object",
+     "labels": "array",
+     "metadataId": "string",
+     "status": "string",
+     "description": "string",
+     "logos": "object",
+     "categories": "array"
+    },
+    "evidence": [
+     "openapi/_original/segment-config-api-openapi.yml#DELETE /workspaces/{workspaceName}/sources/{sourceName}",
+     "openapi/_original/segment-config-api-openapi.yml#GET /workspaces/{workspaceName}/sources",
+     "openapi/_original/segment-config-api-openapi.yml#GET /workspaces/{workspaceName}/sources/{sourceName}",
+     "openapi/_original/segment-config-api-openapi.yml#POST /workspaces/{workspaceName}/sources",
+     "openapi/_original/segment-public-api-openapi.yml#DELETE /sources/{sourceId}",
+     "openapi/_original/segment-public-api-openapi.yml#GET /catalog/sources",
+     "openapi/_original/segment-public-api-openapi.yml#GET /catalog/sources/{sourceMetadataId}",
+     "openapi/_original/segment-public-api-openapi.yml#GET /sources",
+     "openapi/_original/segment-public-api-openapi.yml#GET /sources/{sourceId}",
+     "openapi/_original/segment-public-api-openapi.yml#PATCH /sources/{sourceId}",
+     "openapi/_original/segment-public-api-openapi.yml#POST /sources"
+    ]
+   },
+   "unstructured": {
+    "segments": [
+     "sources"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "id": "string",
+     "name": "string",
+     "type": null,
+     "config": null,
+     "created_at": "string",
+     "updated_at": null,
+     "key": null,
+     "box_app_config": null,
+     "access_token": null,
+     "refresh_token": null,
+     "remote_url": "string",
+     "recursive": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/unstructured-platform-api-openapi.yml#DELETE /api/v1/sources/{source_id}",
+     "openapi/_original/unstructured-platform-api-openapi.yml#GET /api/v1/sources/",
+     "openapi/_original/unstructured-platform-api-openapi.yml#GET /api/v1/sources/{source_id}",
+     "openapi/_original/unstructured-platform-api-openapi.yml#POST /api/v1/sources/",
+     "openapi/_original/unstructured-platform-api-openapi.yml#PUT /api/v1/sources/{source_id}"
+    ]
+   }
+  },
+  "destination": {
+   "altimate-ai": {
+    "segments": [
+     "targets"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/altimate-ai-openapi-original.json#GET /sso-group-mappings/targets"
+    ]
+   },
+   "census": {
+    "segments": [
+     "destinations"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "integer",
+     "name": "string",
+     "type": "string",
+     "credentials": "object",
+     "created_at": "string"
+    },
+    "evidence": [
+     "openapi/_original/census-openapi.yml#DELETE /destinations/{id}",
+     "openapi/_original/census-openapi.yml#GET /destinations",
+     "openapi/_original/census-openapi.yml#GET /destinations/{id}",
+     "openapi/_original/census-openapi.yml#PATCH /destinations/{id}",
+     "openapi/_original/census-openapi.yml#POST /destinations"
+    ]
+   },
+   "cloudquery": {
+    "segments": [
+     "destination",
+     "destinations"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "name": "string",
+     "enabled": "boolean",
+     "type": "string",
+     "url": "string",
+     "slack_channels": "array",
+     "last_notification_error_timestamp": "string",
+     "last_notification_error_code": "string",
+     "last_notification_error_message": "string",
+     "created_at": "string",
+     "updated_at": "string",
+     "http_headers": "object",
+     "http_secret_headers": "object",
+     "slack_connection_id": "string",
+     "email_recipients": "array",
+     "msteams_webhook_url": "string",
+     "webhook_signing_secret": "string",
+     "custom_message": "string",
+     "http_body": "string"
+    },
+    "evidence": [
+     "openapi/_original/cloudquery-openapi.json#DELETE /notifications/destination/{notification_destination_id}",
+     "openapi/_original/cloudquery-openapi.json#GET /notifications/destination/{notification_destination_id}",
+     "openapi/_original/cloudquery-openapi.json#GET /notifications/destinations",
+     "openapi/_original/cloudquery-openapi.json#PATCH /notifications/destination/{notification_destination_id}",
+     "openapi/_original/cloudquery-openapi.json#POST /notifications/destinations"
+    ]
+   },
+   "fivetran": {
+    "segments": [
+     "destinations"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "group_id": "string",
+     "service": "string",
+     "region": "string",
+     "time_zone_offset": "string",
+     "config": "object"
+    },
+    "evidence": [
+     "openapi/_original/fivetran-openapi.yml#DELETE /destinations/{destinationId}",
+     "openapi/_original/fivetran-openapi.yml#GET /destinations/{destinationId}",
+     "openapi/_original/fivetran-openapi.yml#PATCH /destinations/{destinationId}",
+     "openapi/_original/fivetran-openapi.yml#POST /destinations"
+    ]
+   },
+   "hightouch": {
+    "segments": [
+     "destinations"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "number",
+     "name": "string",
+     "slug": "string",
+     "workspaceId": "number",
+     "createdAt": "string",
+     "updatedAt": "string",
+     "type": "string",
+     "configuration": "object",
+     "syncs": "array"
+    },
+    "evidence": [
+     "openapi/_original/hightouch-openapi.json#GET /destinations",
+     "openapi/_original/hightouch-openapi.json#GET /destinations/{destinationId}",
+     "openapi/_original/hightouch-openapi.json#PATCH /destinations/{destinationId}",
+     "openapi/_original/hightouch-openapi.json#POST /destinations"
+    ]
+   },
+   "improvado": {
+    "segments": [
+     "destinations"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "name": "string",
+     "title": "string",
+     "info": "string",
+     "icons": "object"
+    },
+    "evidence": [
+     "openapi/_original/improvado-openapi.yml#GET /api/v3/destinations"
+    ]
+   },
+   "keboola": {
+    "segments": [
+     "sinks"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/keboola-stream-api-openapi.yml#DELETE /v1/branches/{branchId}/sources/{sourceId}/sinks/{sinkId}",
+     "openapi/_original/keboola-stream-api-openapi.yml#GET /v1/branches/{branchId}/sources/{sourceId}/sinks",
+     "openapi/_original/keboola-stream-api-openapi.yml#GET /v1/branches/{branchId}/sources/{sourceId}/sinks/{sinkId}",
+     "openapi/_original/keboola-stream-api-openapi.yml#PATCH /v1/branches/{branchId}/sources/{sourceId}/sinks/{sinkId}",
+     "openapi/_original/keboola-stream-api-openapi.yml#POST /v1/branches/{branchId}/sources/{sourceId}/sinks"
+    ]
+   },
+   "oracle-goldengate": {
+    "segments": [
+     "targets"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST item"
+    ],
+    "properties": {
+     "paths": "array",
+     "name": "string",
+     "status": "string",
+     "trail": "string",
+     "port": "integer"
+    },
+    "evidence": [
+     "openapi/_original/oracle-goldengate-rest-api-openapi.yml#DELETE /services/v2/targets/{path}",
+     "openapi/_original/oracle-goldengate-rest-api-openapi.yml#GET /services/v2/targets",
+     "openapi/_original/oracle-goldengate-rest-api-openapi.yml#GET /services/v2/targets/{path}",
+     "openapi/_original/oracle-goldengate-rest-api-openapi.yml#PATCH /services/v2/targets/{path}",
+     "openapi/_original/oracle-goldengate-rest-api-openapi.yml#POST /services/v2/targets/{path}"
+    ]
+   },
+   "precog": {
+    "segments": [
+     "destinations",
+     "destination"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "id": "string",
+     "kindId": "string",
+     "name": "string",
+     "config": "array",
+     "auth": "object",
+     "status": "object",
+     "image": "string"
+    },
+    "evidence": [
+     "openapi/_original/precog-public-http-api-openapi.yaml#GET /destinations",
+     "openapi/_original/precog-public-http-api-openapi.yaml#GET /destinations/{destination-id}",
+     "openapi/_original/precog-public-http-api-openapi.yaml#GET /kinds/destination",
+     "openapi/_original/precog-public-http-api-openapi.yaml#POST /destinations",
+     "openapi/_original/precog-public-http-api-openapi.yaml#PUT /destinations/{destination-id}"
+    ]
+   },
+   "segment": {
+    "segments": [
+     "destinations"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "name": "string",
+     "parent": "string",
+     "display_name": "string",
+     "enabled": "boolean",
+     "connection_mode": "string",
+     "config": "array",
+     "create_time": "string",
+     "update_time": "string",
+     "value": null,
+     "type": "string",
+     "id": "string",
+     "sourceId": "string",
+     "metadata": "object",
+     "settings": "object",
+     "labels": "array",
+     "metadataId": "string",
+     "status": "string",
+     "slug": "string",
+     "description": "string",
+     "logos": "object",
+     "categories": "array",
+     "supportedMethods": "object"
+    },
+    "evidence": [
+     "openapi/_original/segment-config-api-openapi.yml#DELETE /workspaces/{workspaceName}/sources/{sourceName}/destinations/{destinationName}",
+     "openapi/_original/segment-config-api-openapi.yml#GET /workspaces/{workspaceName}/sources/{sourceName}/destinations",
+     "openapi/_original/segment-config-api-openapi.yml#GET /workspaces/{workspaceName}/sources/{sourceName}/destinations/{destinationName}",
+     "openapi/_original/segment-config-api-openapi.yml#PATCH /workspaces/{workspaceName}/sources/{sourceName}/destinations/{destinationName}",
+     "openapi/_original/segment-config-api-openapi.yml#POST /workspaces/{workspaceName}/sources/{sourceName}/destinations",
+     "openapi/_original/segment-public-api-openapi.yml#DELETE /destinations/{destinationId}",
+     "openapi/_original/segment-public-api-openapi.yml#GET /catalog/destinations",
+     "openapi/_original/segment-public-api-openapi.yml#GET /catalog/destinations/{destinationMetadataId}",
+     "openapi/_original/segment-public-api-openapi.yml#GET /destinations",
+     "openapi/_original/segment-public-api-openapi.yml#GET /destinations/{destinationId}",
+     "openapi/_original/segment-public-api-openapi.yml#PATCH /destinations/{destinationId}",
+     "openapi/_original/segment-public-api-openapi.yml#POST /destinations"
+    ]
+   },
+   "sequin-io": {
+    "segments": [
+     "sinks"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "name": "string",
+     "status": "string",
+     "database": "string",
+     "table": "string",
+     "filters": "array",
+     "transform": "string",
+     "destination": "object",
+     "id": "string",
+     "health": "object",
+     "deleted": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/sequin-io-openapi.yml#DELETE /sinks/{id_or_name}",
+     "openapi/_original/sequin-io-openapi.yml#GET /sinks",
+     "openapi/_original/sequin-io-openapi.yml#GET /sinks/{id_or_name}",
+     "openapi/_original/sequin-io-openapi.yml#PATCH /sinks/{id_or_name}",
+     "openapi/_original/sequin-io-openapi.yml#POST /sinks"
+    ]
+   },
+   "unstructured": {
+    "segments": [
+     "destinations"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "id": "string",
+     "name": "string",
+     "type": null,
+     "config": null,
+     "created_at": "string",
+     "updated_at": null,
+     "key": null,
+     "collection_name": "string",
+     "keyspace": null,
+     "batch_size": "integer",
+     "binary_encode_vectors": "boolean",
+     "api_endpoint": "string",
+     "token": "string",
+     "flatten_metadata": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/unstructured-platform-api-openapi.yml#DELETE /api/v1/destinations/{destination_id}",
+     "openapi/_original/unstructured-platform-api-openapi.yml#GET /api/v1/destinations/",
+     "openapi/_original/unstructured-platform-api-openapi.yml#GET /api/v1/destinations/{destination_id}",
+     "openapi/_original/unstructured-platform-api-openapi.yml#POST /api/v1/destinations/",
+     "openapi/_original/unstructured-platform-api-openapi.yml#PUT /api/v1/destinations/{destination_id}"
+    ]
+   }
+  },
+  "data_pipeline": {
+   "ai-squared": {
+    "segments": [
+     "connectors"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "id": "string",
+     "type": "string",
+     "attributes": "object",
+     "name": "string",
+     "connector_type": "string",
+     "connector_name": "string",
+     "configuration": "object"
+    },
+    "evidence": [
+     "openapi/_original/ai-squared-openapi.yml#DELETE /api/v1/connectors/{id}",
+     "openapi/_original/ai-squared-openapi.yml#GET /api/v1/connectors",
+     "openapi/_original/ai-squared-openapi.yml#GET /api/v1/connectors/{id}",
+     "openapi/_original/ai-squared-openapi.yml#POST /api/v1/connectors",
+     "openapi/_original/ai-squared-openapi.yml#PUT /api/v1/connectors/{id}",
+     "openapi/_original/create_connector.yaml#POST /api/v1/connectors",
+     "openapi/_original/delete_connector.yaml#DELETE /api/v1/connectors/{id}",
+     "openapi/_original/get_connector.yaml#GET /api/v1/connectors/{id}",
+     "openapi/_original/list_connectors.yaml#GET /api/v1/connectors",
+     "openapi/_original/update_connector.yaml#PUT /api/v1/connectors/{id}"
+    ]
+   },
+   "airflow": {
+    "segments": [
+     "connections"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH collection",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "connection_id": "string",
+     "conn_type": "string",
+     "description": null,
+     "host": null,
+     "login": null,
+     "schema": null,
+     "port": null,
+     "password": null,
+     "extra": null,
+     "team_name": null,
+     "create": null,
+     "update": null,
+     "delete": null
+    },
+    "evidence": [
+     "openapi/_original/airflow-openapi.yml#DELETE /api/v2/connections/{connection_id}",
+     "openapi/_original/airflow-openapi.yml#GET /api/v2/connections",
+     "openapi/_original/airflow-openapi.yml#GET /api/v2/connections/{connection_id}",
+     "openapi/_original/airflow-openapi.yml#PATCH /api/v2/connections",
+     "openapi/_original/airflow-openapi.yml#PATCH /api/v2/connections/{connection_id}",
+     "openapi/_original/airflow-openapi.yml#POST /api/v2/connections"
+    ]
+   },
+   "altimate-ai": {
+    "segments": [
+     "connections"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "ok": "boolean",
+     "id": "integer",
+     "name": "string",
+     "account_id": "string",
+     "api_base_url": "string",
+     "is_active": "boolean",
+     "created_at": "string",
+     "last_modified_at": "string",
+     "created_by": "integer",
+     "last_modified_by": "integer",
+     "projects": null,
+     "schedule": null,
+     "api_token": "string",
+     "sync_type": null,
+     "schedule_cron": null,
+     "lookback_days": null,
+     "integration_id": "string",
+     "config": "object",
+     "user_id": "integer",
+     "is_valid": "boolean",
+     "last_validated_at": null,
+     "updated_at": null,
+     "description": null,
+     "server_hostname": "string",
+     "http_path": "string",
+     "auth_type": "string",
+     "azure_tenant_id": null,
+     "workspace_id": null,
+     "metastore_id": null,
+     "type": "string",
+     "access_token": "string"
+    },
+    "evidence": [
+     "openapi/_original/altimate-ai-openapi-original.json#DELETE /api/v1/databricks/connections/{connection_id}",
+     "openapi/_original/altimate-ai-openapi-original.json#DELETE /api/v1/dbt/cloud/connections/{connection_id}",
+     "openapi/_original/altimate-ai-openapi-original.json#DELETE /connections/{connection_id}",
+     "openapi/_original/altimate-ai-openapi-original.json#GET /api/v1/databricks/connections",
+     "openapi/_original/altimate-ai-openapi-original.json#GET /api/v1/databricks/connections/{connection_id}",
+     "openapi/_original/altimate-ai-openapi-original.json#GET /api/v1/dbt/cloud/connections",
+     "openapi/_original/altimate-ai-openapi-original.json#GET /api/v1/dbt/cloud/connections/{connection_id}",
+     "openapi/_original/altimate-ai-openapi-original.json#GET /auth/connections",
+     "openapi/_original/altimate-ai-openapi-original.json#GET /connections/",
+     "openapi/_original/altimate-ai-openapi-original.json#PATCH /api/v1/dbt/cloud/connections/{connection_id}",
+     "openapi/_original/altimate-ai-openapi-original.json#PATCH /connections/{connection_id}",
+     "openapi/_original/altimate-ai-openapi-original.json#POST /api/v1/databricks/connections"
+    ]
+   },
+   "apache-airflow": {
+    "segments": [
+     "connections"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH collection",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "conn_type": "string",
+     "connection_id": "string",
+     "description": "string",
+     "host": "string",
+     "login": "string",
+     "port": "integer",
+     "schema": "string",
+     "total_entries": "integer",
+     "extra": "string",
+     "password": "string",
+     "team_name": null,
+     "create": null,
+     "update": null,
+     "delete": null
+    },
+    "evidence": [
+     "openapi/_original/apache-airflow-openapi.yaml#DELETE /connections/{connection_id}",
+     "openapi/_original/apache-airflow-openapi.yaml#GET /connections",
+     "openapi/_original/apache-airflow-openapi.yaml#GET /connections/{connection_id}",
+     "openapi/_original/apache-airflow-openapi.yaml#PATCH /connections/{connection_id}",
+     "openapi/_original/apache-airflow-openapi.yaml#POST /connections",
+     "openapi/_original/apache-airflow-openapi.yml#DELETE /api/v2/connections/{connection_id}",
+     "openapi/_original/apache-airflow-openapi.yml#GET /api/v2/connections",
+     "openapi/_original/apache-airflow-openapi.yml#GET /api/v2/connections/{connection_id}",
+     "openapi/_original/apache-airflow-openapi.yml#PATCH /api/v2/connections",
+     "openapi/_original/apache-airflow-openapi.yml#PATCH /api/v2/connections/{connection_id}",
+     "openapi/_original/apache-airflow-openapi.yml#POST /api/v2/connections"
+    ]
+   },
+   "apache-nifi": {
+    "segments": [
+     "connections",
+     "connectors",
+     "flows"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "bends": "array",
+     "bulletins": "array",
+     "component": "object",
+     "destinationGroupId": "string",
+     "destinationId": "string",
+     "destinationType": "string",
+     "disconnectedNodeAcknowledged": "boolean",
+     "getzIndex": "integer",
+     "id": "string",
+     "labelIndex": "integer",
+     "permissions": "object",
+     "position": "object",
+     "revision": "object",
+     "sourceGroupId": "string",
+     "sourceId": "string",
+     "sourceType": "string",
+     "status": "object",
+     "uri": "string",
+     "operatePermissions": "object",
+     "action": "string",
+     "branch": "string",
+     "bucketId": "string",
+     "comments": "string",
+     "description": "string",
+     "flowId": "string",
+     "flowName": "string",
+     "registryId": "string"
+    },
+    "evidence": [
+     "openapi/_original/apache-nifi-openapi.yml#DELETE /connections/{id}",
+     "openapi/_original/apache-nifi-openapi.yml#DELETE /connectors/{id}",
+     "openapi/_original/apache-nifi-openapi.yml#GET /connections/{id}",
+     "openapi/_original/apache-nifi-openapi.yml#GET /connectors/{id}",
+     "openapi/_original/apache-nifi-openapi.yml#GET /flow/connectors",
+     "openapi/_original/apache-nifi-openapi.yml#GET /flow/registries/{registry-id}/buckets/{bucket-id}/flows",
+     "openapi/_original/apache-nifi-openapi.yml#GET /process-groups/{id}/connections",
+     "openapi/_original/apache-nifi-openapi.yml#POST /connectors",
+     "openapi/_original/apache-nifi-openapi.yml#POST /process-groups/{id}/connections",
+     "openapi/_original/apache-nifi-openapi.yml#PUT /connections/{id}",
+     "openapi/_original/apache-nifi-openapi.yml#PUT /connectors/{id}"
+    ]
+   },
+   "artie": {
+    "segments": [
+     "connectors",
+     "pipelines"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "POST item"
+    ],
+    "properties": {
+     "companyUUID": "string",
+     "connectionLabel": "string",
+     "createdAt": "string",
+     "dataPlaneName": [
+      "null",
+      "string"
+     ],
+     "draftPipelineUUID": [
+      "null",
+      "string"
+     ],
+     "environmentUUID": "string",
+     "isValid": "boolean",
+     "label": "string",
+     "privateLinkUUID": [
+      "null",
+      "string"
+     ],
+     "snapshotPrivateLinkUUID": [
+      "null",
+      "string"
+     ],
+     "sshTunnelUUID": [
+      "null",
+      "string"
+     ],
+     "type": "string",
+     "updatedAt": "string",
+     "uuid": "string",
+     "defaultDatabase": "string",
+     "sharedConfig": null,
+     "backfillStages": "array",
+     "columnHashingSaltUUID": [
+      "null",
+      "string"
+     ],
+     "destinationUUID": [
+      "null",
+      "string"
+     ],
+     "encryptionKeyUUID": [
+      "null",
+      "string"
+     ],
+     "hasBackfillingTables": "boolean",
+     "hasUndeployedChanges": "boolean",
+     "historyBackfillStages": "array",
+     "isDeploying": "boolean",
+     "lastDeployError": "string",
+     "lastDeployFailedAt": [
+      "null",
+      "string"
+     ],
+     "lastDeployedAt": [
+      "null",
+      "string"
+     ],
+     "lastUpdatedAt": "string",
+     "name": "string",
+     "snowflakeEcoScheduleUUID": [
+      "null",
+      "string"
+     ],
+     "sourceReaderUUID": "string",
+     "sourceType": "string",
+     "status": "string",
+     "advancedSettings": "object",
+     "specificDestCfg": "object",
+     "tables": "array"
+    },
+    "evidence": [
+     "openapi/_original/artie-openapi.yml#DELETE /connectors/{uuid}",
+     "openapi/_original/artie-openapi.yml#DELETE /pipelines/{uuid}",
+     "openapi/_original/artie-openapi.yml#GET /connectors",
+     "openapi/_original/artie-openapi.yml#GET /connectors/{uuid}",
+     "openapi/_original/artie-openapi.yml#GET /pipelines",
+     "openapi/_original/artie-openapi.yml#GET /pipelines/{uuid}",
+     "openapi/_original/artie-openapi.yml#POST /connectors",
+     "openapi/_original/artie-openapi.yml#POST /connectors/{uuid}",
+     "openapi/_original/artie-openapi.yml#POST /pipelines",
+     "openapi/_original/artie-openapi.yml#POST /pipelines/{uuid}"
+    ]
+   },
+   "bem": {
+    "segments": [
+     "connectors"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {
+     "type": null,
+     "connectorID": "string",
+     "name": "string",
+     "workflowID": "string",
+     "workflowName": "string",
+     "boxClientID": "string",
+     "boxClientSecret": "string",
+     "boxEnterpriseID": "string",
+     "boxFolderID": "string",
+     "paragonSyncID": "string",
+     "paragonIntegration": "string",
+     "paragonConfiguration": "object"
+    },
+    "evidence": [
+     "openapi/_original/bem-openapi-original.yml#DELETE /v3/connectors/{connectorID}",
+     "openapi/_original/bem-openapi-original.yml#GET /v3/connectors",
+     "openapi/_original/bem-openapi-original.yml#POST /v3/connectors"
+    ]
+   },
+   "confluent": {
+    "segments": [
+     "connections",
+     "connectors"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "name": "string",
+     "config": "object",
+     "tasks": "array",
+     "type": "string",
+     "offsets": "array",
+     "error": "object",
+     "api_version": "string",
+     "kind": "string",
+     "metadata": null,
+     "spec": "object",
+     "status": "object"
+    },
+    "evidence": [
+     "openapi/_original/confluent-cloud-full.yaml#DELETE /connect/v1/environments/{environment_id}/clusters/{kafka_cluster_id}/connectors/{connector_name}",
+     "openapi/_original/confluent-cloud-full.yaml#DELETE /sql/v1/organizations/{organization_id}/environments/{environment_id}/connections/{connection_name}",
+     "openapi/_original/confluent-cloud-full.yaml#GET /connect/v1/environments/{environment_id}/clusters/{kafka_cluster_id}/connectors",
+     "openapi/_original/confluent-cloud-full.yaml#GET /connect/v1/environments/{environment_id}/clusters/{kafka_cluster_id}/connectors/{connector_name}",
+     "openapi/_original/confluent-cloud-full.yaml#GET /sql/v1/organizations/{organization_id}/environments/{environment_id}/connections",
+     "openapi/_original/confluent-cloud-full.yaml#GET /sql/v1/organizations/{organization_id}/environments/{environment_id}/connections/{connection_name}",
+     "openapi/_original/confluent-cloud-full.yaml#POST /connect/v1/environments/{environment_id}/clusters/{kafka_cluster_id}/connectors",
+     "openapi/_original/confluent-cloud-full.yaml#POST /sql/v1/organizations/{organization_id}/environments/{environment_id}/connections",
+     "openapi/_original/confluent-cloud-full.yaml#PUT /sql/v1/organizations/{organization_id}/environments/{environment_id}/connections/{connection_name}",
+     "openapi/_original/confluent-cloud-openapi.yaml#DELETE /connect/v1/environments/{environment_id}/clusters/{kafka_cluster_id}/connectors/{connector_name}",
+     "openapi/_original/confluent-cloud-openapi.yaml#DELETE /sql/v1/organizations/{organization_id}/environments/{environment_id}/connections/{connection_name}",
+     "openapi/_original/confluent-cloud-openapi.yaml#GET /connect/v1/environments/{environment_id}/clusters/{kafka_cluster_id}/connectors"
+    ]
+   },
+   "debezium": {
+    "segments": [
+     "connectors"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "name": "string",
+     "config": "object",
+     "tasks": "array",
+     "type": "string"
+    },
+    "evidence": [
+     "openapi/_original/debezium-connect.yml#DELETE /connectors/{connector}",
+     "openapi/_original/debezium-connect.yml#GET /connectors",
+     "openapi/_original/debezium-connect.yml#GET /connectors/{connector}",
+     "openapi/_original/debezium-connect.yml#POST /connectors"
+    ]
+   },
+   "decodable": {
+    "segments": [
+     "connections",
+     "pipelines"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "id": "string",
+     "name": "string",
+     "description": "string",
+     "connector": "string",
+     "type": "string",
+     "stream_id": "string",
+     "properties": "object",
+     "execution": "object",
+     "sql": "string"
+    },
+    "evidence": [
+     "openapi/_original/decodable-openapi.yml#DELETE /v1alpha2/connections/{connection_id}",
+     "openapi/_original/decodable-openapi.yml#DELETE /v1alpha2/pipelines/{pipeline_id}",
+     "openapi/_original/decodable-openapi.yml#GET /v1alpha2/connections/",
+     "openapi/_original/decodable-openapi.yml#GET /v1alpha2/connections/{connection_id}",
+     "openapi/_original/decodable-openapi.yml#GET /v1alpha2/pipelines/",
+     "openapi/_original/decodable-openapi.yml#GET /v1alpha2/pipelines/{pipeline_id}",
+     "openapi/_original/decodable-openapi.yml#POST /v1alpha2/connections/",
+     "openapi/_original/decodable-openapi.yml#POST /v1alpha2/pipelines/",
+     "openapi/_original/decodable-openapi.yml#PUT /v1alpha2/connections/{connection_id}",
+     "openapi/_original/decodable-openapi.yml#PUT /v1alpha2/pipelines/{pipeline_id}"
+    ]
+   },
+   "estuary": {
+    "segments": [
+     "connectors"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "id": "string",
+     "image_name": "string",
+     "title": "object",
+     "short_description": "object",
+     "recommended": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/estuary-openapi.yml#GET /connectors"
+    ]
+   },
+   "feldera": {
+    "segments": [
+     "pipelines"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "description": "string",
+     "tags": "array",
+     "connectors": null,
+     "created_at": "string",
+     "deployment_desired_status": "string",
+     "deployment_desired_status_since": "string",
+     "deployment_error": null,
+     "deployment_id": "string",
+     "deployment_initial": null,
+     "deployment_resources_desired_status": "string",
+     "deployment_resources_desired_status_since": "string",
+     "deployment_resources_status": "string",
+     "deployment_resources_status_details": null,
+     "deployment_resources_status_since": "string",
+     "deployment_runtime_desired_status": null,
+     "deployment_runtime_desired_status_since": "string",
+     "deployment_runtime_status": null,
+     "deployment_runtime_status_details": null,
+     "deployment_runtime_status_since": "string",
+     "deployment_status": "string",
+     "deployment_status_since": "string",
+     "id": "string",
+     "name": "string",
+     "platform_version": "string",
+     "program_code": "string",
+     "program_config": null,
+     "program_error": null,
+     "program_info": null,
+     "program_status": "string",
+     "program_status_since": "string",
+     "program_version": "integer",
+     "refresh_version": "integer",
+     "runtime_config": null,
+     "storage_status": "string",
+     "storage_status_details": null,
+     "udf_rust": "string",
+     "udf_toml": "string",
+     "version": "integer"
+    },
+    "evidence": [
+     "openapi/_original/feldera-openapi-original.json#DELETE /v0/pipelines/{pipeline_name}",
+     "openapi/_original/feldera-openapi-original.json#GET /v0/pipelines",
+     "openapi/_original/feldera-openapi-original.json#GET /v0/pipelines/{pipeline_name}",
+     "openapi/_original/feldera-openapi-original.json#PATCH /v0/pipelines/{pipeline_name}",
+     "openapi/_original/feldera-openapi-original.json#POST /v0/pipelines",
+     "openapi/_original/feldera-openapi-original.json#PUT /v0/pipelines/{pipeline_name}"
+    ]
+   },
+   "fivetran": {
+    "segments": [
+     "connections"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "service": "string",
+     "group_id": "string",
+     "config": "object",
+     "paused": "boolean",
+     "sync_frequency": "integer"
+    },
+    "evidence": [
+     "openapi/_original/fivetran-openapi.yml#DELETE /connections/{connectionId}",
+     "openapi/_original/fivetran-openapi.yml#GET /connections",
+     "openapi/_original/fivetran-openapi.yml#GET /connections/{connectionId}",
+     "openapi/_original/fivetran-openapi.yml#PATCH /connections/{connectionId}",
+     "openapi/_original/fivetran-openapi.yml#POST /connections"
+    ]
+   },
+   "flume-health": {
+    "segments": [
+     "connections"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "created": "string",
+     "customColumns": "array",
+     "id": "integer",
+     "logo": "string",
+     "name": "string",
+     "allowAnalysisMode": "boolean",
+     "connectionConfig": "object",
+     "connectionType": "string",
+     "createdAt": "string",
+     "defaultRowLimit": "integer",
+     "deletedAt": "string",
+     "description": "string",
+     "enabled": "boolean",
+     "maxResultBytes": "integer",
+     "supportsSQL": "boolean",
+     "timeoutSeconds": "integer",
+     "updatedAt": "string",
+     "workspaceOnly": "boolean",
+     "secretValue": "string"
+    },
+    "evidence": [
+     "openapi/_original/flume-health-openapi.json#DELETE /api/v1/context/discovery/connections/{id}",
+     "openapi/_original/flume-health-openapi.json#GET /api/v1/connections",
+     "openapi/_original/flume-health-openapi.json#GET /api/v1/connections/{id}",
+     "openapi/_original/flume-health-openapi.json#GET /api/v1/context/discovery/connections",
+     "openapi/_original/flume-health-openapi.json#GET /api/v1/context/discovery/connections/{id}",
+     "openapi/_original/flume-health-openapi.json#PATCH /api/v1/connections/{id}",
+     "openapi/_original/flume-health-openapi.json#PATCH /api/v1/context/discovery/connections/{id}",
+     "openapi/_original/flume-health-openapi.json#POST /api/v1/connections",
+     "openapi/_original/flume-health-openapi.json#POST /api/v1/context/discovery/connections"
+    ]
+   },
+   "hightouch": {
+    "segments": [
+     "flows"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "id": "string",
+     "name": "string",
+     "workspaceId": "number",
+     "decisionEngineId": "string",
+     "audienceId": "number",
+     "status": "string",
+     "config": "object",
+     "createdAt": "string",
+     "updatedAt": "string"
+    },
+    "evidence": [
+     "openapi/_original/hightouch-openapi.json#GET /decision-engine/flows"
+    ]
+   },
+   "improvado": {
+    "segments": [
+     "connections"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "id": "integer",
+     "uid": "string",
+     "title": "string",
+     "datasource_name": "string",
+     "status": "string",
+     "created_at": "string",
+     "updated_at": "string",
+     "accounts_number": "integer",
+     "enabled_for_extraction_accounts_number": "integer",
+     "accounts_status": "string",
+     "update_accounts_last_successed": "string",
+     "update_accounts_was_successfull": "boolean",
+     "destination": "object",
+     "error_text": "string",
+     "is_editable": "boolean",
+     "create_load_for_new_tables": "boolean",
+     "destination_name": "string",
+     "connection_params": "object"
+    },
+    "evidence": [
+     "openapi/_original/improvado-openapi.yml#DELETE /api/v3/connections/{connection_id}",
+     "openapi/_original/improvado-openapi.yml#DELETE /api/v3/datasources/{datasource_name}/connections/{id}",
+     "openapi/_original/improvado-openapi.yml#GET /api/v3/datasources/{datasource_name}/connections",
+     "openapi/_original/improvado-openapi.yml#GET /api/v3/destinations/{destination_name}/connections",
+     "openapi/_original/improvado-openapi.yml#GET /api/v3/destinations/{destination_name}/connections/{id}",
+     "openapi/_original/improvado-openapi.yml#PATCH /api/v3/destinations/{destination_name}/connections/{id}",
+     "openapi/_original/improvado-openapi.yml#POST /api/v3/destinations/{destination_name}/connections",
+     "openapi/_original/improvado-openapi.yml#PUT /api/v3/destinations/{destination_name}/connections/{id}"
+    ]
+   },
+   "informatica": {
+    "segments": [
+     "connection"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "@type": "string",
+     "id": "string",
+     "orgId": "string",
+     "name": "string",
+     "description": "string",
+     "type": "string",
+     "createTime": "string",
+     "updateTime": "string",
+     "createdBy": "string",
+     "updatedBy": "string",
+     "agentId": "string",
+     "runtimeEnvironmentId": "string",
+     "host": "string",
+     "port": "integer",
+     "database": "string",
+     "schema": "string",
+     "username": "string",
+     "password": "string",
+     "authenticationType": "string",
+     "serviceUrl": "string",
+     "codepage": "string",
+     "connParams": "object"
+    },
+    "evidence": [
+     "openapi/_original/informatica-platform-rest-api-openapi.yml#DELETE /saas/api/v2/connection/{connectionId}",
+     "openapi/_original/informatica-platform-rest-api-openapi.yml#GET /saas/api/v2/connection",
+     "openapi/_original/informatica-platform-rest-api-openapi.yml#GET /saas/api/v2/connection/{connectionId}",
+     "openapi/_original/informatica-platform-rest-api-openapi.yml#POST /saas/api/v2/connection",
+     "openapi/_original/informatica-platform-rest-api-openapi.yml#PUT /saas/api/v2/connection/{connectionId}"
+    ]
+   },
+   "infoworks": {
+    "segments": [
+     "pipelines",
+     "connection"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT collection",
+     "PUT item"
+    ],
+    "properties": {
+     "limit": "integer",
+     "offset": "integer",
+     "links": "object",
+     "total_count": "integer",
+     "message": "string",
+     "id": "string",
+     "name": "string",
+     "enable_log_based_cdc": "boolean",
+     "driver_name": "string",
+     "connection_url": "string",
+     "username": null,
+     "password": null,
+     "source_schema": "string",
+     "connection_mode": "string",
+     "database": "string",
+     "snowflake_profile": "string",
+     "warehouse": "string",
+     "staging_database": "string",
+     "enable_dictionary_rebuild_for_each_job": "boolean",
+     "dictionary_path": "string",
+     "dictionary_type": "string",
+     "auth_type": "string",
+     "connection_string": "string",
+     "table": "string",
+     "schema": "string",
+     "query_tag": "string",
+     "domain_id": "string",
+     "batch_engine": "string",
+     "environment_id": "string",
+     "environment_name": "string",
+     "created_at": "string",
+     "created_by": "string",
+     "modified_at": "string",
+     "modified_by": "string",
+     "environment": "object",
+     "ephemeral_compute": "array",
+     "interactive_compute": "array",
+     "storage": "array",
+     "storage_id": "string",
+     "compute_template_id": "string",
+     "ml_engine": "string",
+     "snowflake_warehouse": "string",
+     "description": "string",
+     "active_version_id": "string",
+     "versions_count": "integer",
+     "metadata_version": "integer",
+     "pipeline_id": "string",
+     "pipeline_version_id": "string",
+     "version_name": "string"
+    },
+    "evidence": [
+     "openapi/_original/infoworks-rest-api-v3-openapi.yml#DELETE /domains/{domain_id}/pipelines/{pipeline_id}",
+     "openapi/_original/infoworks-rest-api-v3-openapi.yml#GET /admin/environment/{environment_id}/environment-storage/{environment_storage_id}/pipelines",
+     "openapi/_original/infoworks-rest-api-v3-openapi.yml#GET /admin/pipelines",
+     "openapi/_original/infoworks-rest-api-v3-openapi.yml#GET /domains/{domain_id}/pipelines",
+     "openapi/_original/infoworks-rest-api-v3-openapi.yml#GET /domains/{domain_id}/pipelines/{pipeline_id}",
+     "openapi/_original/infoworks-rest-api-v3-openapi.yml#GET /pipeline-version-locks/pipelines/{pipeline_id}",
+     "openapi/_original/infoworks-rest-api-v3-openapi.yml#GET /sources/{source_id}/configurations/connection",
+     "openapi/_original/infoworks-rest-api-v3-openapi.yml#GET /sources/{source_id}/tables/{table_id}/configurations/export/connection",
+     "openapi/_original/infoworks-rest-api-v3-openapi.yml#POST /domains/{domain_id}/pipelines",
+     "openapi/_original/infoworks-rest-api-v3-openapi.yml#PUT /domains/{domain_id}/pipelines/{pipeline_id}",
+     "openapi/_original/infoworks-rest-api-v3-openapi.yml#PUT /sources/{source_id}/configurations/connection",
+     "openapi/_original/infoworks-rest-api-v3-openapi.yml#PUT /sources/{source_id}/tables/{table_id}/configurations/export/connection"
+    ]
+   },
+   "mage-ai": {
+    "segments": [
+     "pipelines"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "uuid": "string",
+     "name": "string",
+     "type": "string",
+     "language": "string",
+     "upstream_blocks": "array",
+     "downstream_blocks": "array",
+     "api_key": "string",
+     "pipeline": "object"
+    },
+    "evidence": [
+     "openapi/_original/mage-ai-openapi.yml#DELETE /pipelines/{uuid}",
+     "openapi/_original/mage-ai-openapi.yml#GET /pipelines",
+     "openapi/_original/mage-ai-openapi.yml#GET /pipelines/{uuid}",
+     "openapi/_original/mage-ai-openapi.yml#POST /pipelines",
+     "openapi/_original/mage-ai-openapi.yml#PUT /pipelines/{uuid}"
+    ]
+   },
+   "metaplane": {
+    "segments": [
+     "connections",
+     "connection"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "id": "string",
+     "name": "string",
+     "type": "string",
+     "isEnabled": "boolean",
+     "createdAt": "string",
+     "updatedAt": "string",
+     "status": "string",
+     "genericObjectSubtype": "string",
+     "valueType": "string",
+     "cronTab": "string",
+     "description": "string",
+     "config": "object",
+     "absolutePath": "string",
+     "entityType": "string",
+     "connectionId": "string",
+     "monitorTags": "array",
+     "monitorGroups": "array"
+    },
+    "evidence": [
+     "openapi/_original/metaplane-api-openapi.yml#GET /v1/connections",
+     "openapi/_original/metaplane-api-openapi.yml#GET /v1/monitors/connection/{connectionId}"
+    ]
+   },
+   "microsoft-azure-data-factory": {
+    "segments": [
+     "pipelines"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PUT item"
+    ],
+    "properties": {
+     "properties": "object",
+     "etag": "string"
+    },
+    "evidence": [
+     "openapi/_original/microsoft-azure-data-factory-datafactory-2018-06-01-swagger.json#DELETE /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataFactory/factories/{factoryName}/pipelines/{pipelineName}",
+     "openapi/_original/microsoft-azure-data-factory-datafactory-2018-06-01-swagger.json#GET /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataFactory/factories/{factoryName}/pipelines",
+     "openapi/_original/microsoft-azure-data-factory-datafactory-2018-06-01-swagger.json#GET /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataFactory/factories/{factoryName}/pipelines/{pipelineName}",
+     "openapi/_original/microsoft-azure-data-factory-datafactory-2018-06-01-swagger.json#PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataFactory/factories/{factoryName}/pipelines/{pipelineName}"
+    ]
+   },
+   "microsoft-azure-synapse-analytics": {
+    "segments": [
+     "pipelines"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PUT item"
+    ],
+    "properties": {
+     "id": "string",
+     "name": "string",
+     "type": "string",
+     "etag": "string",
+     "properties": "object"
+    },
+    "evidence": [
+     "openapi/_original/azure-synapse-analytics-pipeline-openapi.yml#DELETE /pipelines/{pipelineName}",
+     "openapi/_original/azure-synapse-analytics-pipeline-openapi.yml#GET /pipelines",
+     "openapi/_original/azure-synapse-analytics-pipeline-openapi.yml#GET /pipelines/{pipelineName}",
+     "openapi/_original/azure-synapse-analytics-pipeline-openapi.yml#PUT /pipelines/{pipelineName}"
+    ]
+   },
+   "netter": {
+    "segments": [
+     "pipelines"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/netter-openapi-original.json#GET /api/v1/dashboard-data/{dashboard_id}/pipelines"
+    ]
+   },
+   "nexla": {
+    "segments": [
+     "flows"
+    ],
+    "operations": [
+     "DELETE collection",
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT collection"
+    ],
+    "properties": {
+     "id": "integer",
+     "parent_node_id": "integer",
+     "origin_node_id": "integer",
+     "data_source_id": "integer",
+     "data_set_id": "integer",
+     "data_sink_id": "integer",
+     "shared_origin_node_id": "integer",
+     "status": "string",
+     "project_id": "integer",
+     "flow_type": "string",
+     "ingestion_mode": "string",
+     "name": "string",
+     "description": "string",
+     "children": "array",
+     "code_containers": "array",
+     "data_sources": "array",
+     "data_sets": "array",
+     "data_sinks": "array",
+     "data_credentials": "array",
+     "shared_data_sets": "array",
+     "orgs": "array",
+     "users": "array",
+     "projects": "array",
+     "records": "integer",
+     "size": "integer",
+     "errors": "integer",
+     "reporting_date": "string",
+     "run_id": "integer",
+     "code": "string",
+     "message": "string",
+     "flows": "array"
+    },
+    "evidence": [
+     "openapi/_original/nexla-rest-api-openapi.yml#DELETE /flows/{flow_id}",
+     "openapi/_original/nexla-rest-api-openapi.yml#DELETE /projects/{project_id}/flows",
+     "openapi/_original/nexla-rest-api-openapi.yml#GET /flows",
+     "openapi/_original/nexla-rest-api-openapi.yml#GET /flows/{flow_id}",
+     "openapi/_original/nexla-rest-api-openapi.yml#GET /projects/{project_id}/flows",
+     "openapi/_original/nexla-rest-api-openapi.yml#POST /projects/{project_id}/flows",
+     "openapi/_original/nexla-rest-api-openapi.yml#PUT /projects/{project_id}/flows",
+     "openapi/_original/nexla-rest-api.yaml#DELETE /flows/{flow_id}",
+     "openapi/_original/nexla-rest-api.yaml#DELETE /projects/{project_id}/flows",
+     "openapi/_original/nexla-rest-api.yaml#GET /flows",
+     "openapi/_original/nexla-rest-api.yaml#GET /flows/{flow_id}",
+     "openapi/_original/nexla-rest-api.yaml#GET /projects/{project_id}/flows"
+    ]
+   },
+   "oracle-goldengate": {
+    "segments": [
+     "connections",
+     "pipelines",
+     "connection"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection",
+     "POST item",
+     "PUT item"
+    ],
+    "properties": {
+     "id": "string",
+     "displayName": "string",
+     "connectionType": "string",
+     "lifecycleState": "string",
+     "timeCreated": "string",
+     "description": "string",
+     "compartmentId": "string",
+     "technologyType": "string",
+     "timeUpdated": "string",
+     "freeformTags": "object",
+     "sourceConnectionDetailId": "string",
+     "targetConnectionDetailId": "string",
+     "name": "string",
+     "type": "string",
+     "connectionString": "string",
+     "credentials": "object",
+     "status": "string",
+     "createdBy": "string",
+     "createdAt": "string",
+     "updatedAt": "string",
+     "sources": "array",
+     "targets": "array",
+     "stages": "array",
+     "databaseType": "string",
+     "host": "string",
+     "port": "integer",
+     "serviceName": "string",
+     "schema": "string",
+     "agentHost": "string",
+     "agentPort": "integer",
+     "username": "string",
+     "password": "string",
+     "valid": "boolean",
+     "messages": "array"
+    },
+    "evidence": [
+     "openapi/_original/oracle-goldengate-cloud-service-api-openapi.yml#DELETE /20200407/connections/{connectionId}",
+     "openapi/_original/oracle-goldengate-cloud-service-api-openapi.yml#DELETE /20200407/pipelines/{pipelineId}",
+     "openapi/_original/oracle-goldengate-cloud-service-api-openapi.yml#GET /20200407/connections",
+     "openapi/_original/oracle-goldengate-cloud-service-api-openapi.yml#GET /20200407/connections/{connectionId}",
+     "openapi/_original/oracle-goldengate-cloud-service-api-openapi.yml#GET /20200407/pipelines",
+     "openapi/_original/oracle-goldengate-cloud-service-api-openapi.yml#GET /20200407/pipelines/{pipelineId}",
+     "openapi/_original/oracle-goldengate-cloud-service-api-openapi.yml#POST /20200407/connections",
+     "openapi/_original/oracle-goldengate-cloud-service-api-openapi.yml#POST /20200407/pipelines",
+     "openapi/_original/oracle-goldengate-cloud-service-api-openapi.yml#PUT /20200407/connections/{connectionId}",
+     "openapi/_original/oracle-goldengate-cloud-service-api-openapi.yml#PUT /20200407/pipelines/{pipelineId}",
+     "openapi/_original/oracle-goldengate-rest-api-openapi.yml#DELETE /services/v2/connections/{connection}",
+     "openapi/_original/oracle-goldengate-rest-api-openapi.yml#GET /services/v2/connections"
+    ]
+   },
+   "peaka": {
+    "segments": [
+     "connections"
+    ],
+    "operations": [
+     "GET item",
+     "POST item"
+    ],
+    "properties": {
+     "id": "string",
+     "name": "string",
+     "type": "string",
+     "url": "string",
+     "credential": "object",
+     "connectionCallback": "string"
+    },
+    "evidence": [
+     "openapi/_original/peaka-api-openapi.json#GET /connections/{projectId}",
+     "openapi/_original/peaka-api-openapi.json#POST /connections/{projectId}"
+    ]
+   },
+   "polytomic": {
+    "segments": [
+     "connections"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "api_calls_last_24_hours": [
+      "integer",
+      "null"
+     ],
+     "configuration": [
+      "object",
+      "null"
+     ],
+     "created_at": "string",
+     "created_by": "object",
+     "id": "string",
+     "name": "string",
+     "organization_id": "string",
+     "parent_connection_id": "string",
+     "policies": "array",
+     "saved": "boolean",
+     "status": "string",
+     "status_error": "string",
+     "type": "object",
+     "updated_at": "string",
+     "updated_by": "object",
+     "auth_code": "string",
+     "auth_url": "string",
+     "healthcheck_interval": "string",
+     "redirect_url": "string",
+     "validate": "boolean",
+     "reconnect": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/polytomic-openapi.json#DELETE /api/connections/{id}",
+     "openapi/_original/polytomic-openapi.json#GET /api/connections",
+     "openapi/_original/polytomic-openapi.json#GET /api/connections/{id}",
+     "openapi/_original/polytomic-openapi.json#POST /api/connections",
+     "openapi/_original/polytomic-openapi.json#PUT /api/connections/{id}"
+    ]
+   },
+   "popsink": {
+    "segments": [
+     "pipelines"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "source_name": "string",
+     "source_type": null,
+     "transform": "integer",
+     "target_name": "string",
+     "target_type": null,
+     "name": "string",
+     "state": "string",
+     "owner": "string",
+     "json_configuration": "object",
+     "team_name": "string",
+     "team_id": "string"
+    },
+    "evidence": [
+     "openapi/_original/popsink-onprem-api-openapi-original.json#DELETE /pipelines/{pipeline_id}",
+     "openapi/_original/popsink-onprem-api-openapi-original.json#GET /pipelines/",
+     "openapi/_original/popsink-onprem-api-openapi-original.json#GET /pipelines/{pipeline_id}",
+     "openapi/_original/popsink-onprem-api-openapi-original.json#PATCH /pipelines/{pipeline_id}",
+     "openapi/_original/popsink-onprem-api-openapi-original.json#POST /pipelines/"
+    ]
+   },
+   "precog": {
+    "segments": [
+     "pipelines"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "name": "string",
+     "destinationId": "string",
+     "columnNameStrategy": "object",
+     "datasetIds": "array",
+     "piiConfig": "object",
+     "vectorize": "boolean",
+     "sentimentAnalysis": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/precog-public-http-api-openapi.yaml#DELETE /pipelines/{pipeline-id}",
+     "openapi/_original/precog-public-http-api-openapi.yaml#DELETE /sources/{source-id}/pipelines/{pipeline-id}",
+     "openapi/_original/precog-public-http-api-openapi.yaml#GET /pipelines",
+     "openapi/_original/precog-public-http-api-openapi.yaml#GET /pipelines/{pipeline-id}",
+     "openapi/_original/precog-public-http-api-openapi.yaml#POST /pipelines"
+    ]
+   },
+   "prophecyio": {
+    "segments": [
+     "connection",
+     "pipeline"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "name": "string",
+     "kind": "string",
+     "isDefaultWarehouseConnection": "boolean",
+     "properties": "object",
+     "success": "boolean",
+     "runId": "string",
+     "msg": "string",
+     "fabricId": "integer",
+     "pipelineName": "string",
+     "projectId": "string",
+     "parameters": "object",
+     "branch": "string",
+     "version": "string",
+     "processName": "string",
+     "createdAt": "string",
+     "updatedAt": "string",
+     "runStatus": "string",
+     "errorMessage": "string"
+    },
+    "evidence": [
+     "openapi/_original/prophecyio-connections-openapi.json#GET /api/orchestration/fabric/{fabricId}/connection",
+     "openapi/_original/prophecyio-connections-openapi.json#POST /api/orchestration/fabric/{fabricId}/connection",
+     "openapi/_original/prophecyio-pipelines-openapi.json#GET /api/trigger/pipeline/{runId}",
+     "openapi/_original/prophecyio-pipelines-openapi.json#POST /api/trigger/pipeline"
+    ]
+   },
+   "qliksense": {
+    "segments": [
+     "connections"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "id": "string",
+     "name": "string",
+     "type": "string",
+     "spaceId": "string",
+     "spaceStats": "object",
+     "connectStatement": "string"
+    },
+    "evidence": [
+     "openapi/_original/qliksense-data-files.json#GET /api/v1/data-files/connections",
+     "openapi/_original/qliksense-data-files.json#GET /api/v1/data-files/connections/{id}"
+    ]
+   },
+   "rivery": {
+    "segments": [
+     "connections"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "next_page": null,
+     "previous_page": null,
+     "page": "integer",
+     "current_page_size": "integer",
+     "total_items": "integer",
+     "account_id": "string",
+     "environment_id": "string",
+     "items": "array",
+     "source_name": null,
+     "connection_name": "string",
+     "segment": null,
+     "connection_type": null
+    },
+    "evidence": [
+     "openapi/_original/rivery-openapi.json#DELETE /v1/accounts/{account_id}/environments/{environment_id}/connections/{connection_cross_id}",
+     "openapi/_original/rivery-openapi.json#GET /v1/accounts/{account_id}/environments/{environment_id}/connections",
+     "openapi/_original/rivery-openapi.json#POST /v1/accounts/{account_id}/environments/{environment_id}/connections",
+     "openapi/_original/rivery-openapi.json#PUT /v1/accounts/{account_id}/environments/{environment_id}/connections/{cross_id}"
+    ]
+   },
+   "skyvia": {
+    "segments": [
+     "connections"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "id": "integer",
+     "name": "string",
+     "connector": "string",
+     "type": "string"
+    },
+    "evidence": [
+     "openapi/_original/skyvia-public-api-openapi-original.json#GET /v1/workspaces/{workspaceId}/connections",
+     "openapi/_original/skyvia-public-api-openapi-original.json#GET /v1/workspaces/{workspaceId}/connections/{connectionId}"
+    ]
+   },
+   "structify": {
+    "segments": [
+     "connectors"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "connector_category": null,
+     "created_at": "string",
+     "datahub_ingestion_type": "string",
+     "datahub_secret_map": null,
+     "datahub_urn": "string",
+     "deleted_at": "string",
+     "description": "string",
+     "id": "string",
+     "known_connector_type": "string",
+     "name": "string",
+     "nango_connection_id": "string",
+     "oauth_scopes": "array",
+     "owner_user_id": "string",
+     "refresh_cron_schedule": "string",
+     "refresh_next_run_at": "string",
+     "team_id": "string",
+     "team_visibility": "string",
+     "updated_at": "string",
+     "usage_snippet_override": "string",
+     "secret_name": "string",
+     "secrets": "object",
+     "secret_value": "string",
+     "shared_user_roles": "object"
+    },
+    "evidence": [
+     "openapi/_original/structify-openapi-original.json#DELETE /connectors/{connector_id}",
+     "openapi/_original/structify-openapi-original.json#GET /connectors",
+     "openapi/_original/structify-openapi-original.json#GET /connectors/{connector_id}",
+     "openapi/_original/structify-openapi-original.json#PATCH /connectors/{connector_id}",
+     "openapi/_original/structify-openapi-original.json#POST /connectors"
+    ]
+   },
+   "talend": {
+    "segments": [
+     "connection",
+     "connections"
+    ],
+    "operations": [
+     "DELETE collection",
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "name": "string",
+     "workspaceId": "string",
+     "type": "string",
+     "created": "string",
+     "configuration": "object"
+    },
+    "evidence": [
+     "openapi/_original/dynamic-engine-environments-openapi.json#DELETE /orchestration/dynamic-engine-environments/{environmentId}/connection",
+     "openapi/_original/dynamic-engine-environments-openapi.json#POST /orchestration/dynamic-engine-environments/{environmentId}/connection",
+     "openapi/_original/talend-orchestration-openapi.yml#GET /orchestration/connections",
+     "openapi/_original/talend-orchestration-openapi.yml#POST /orchestration/connections"
+    ]
+   },
+   "tetrascience": {
+    "segments": [
+     "connectors",
+     "connector",
+     "pipeline"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "PUT collection"
+    ],
+    "properties": {
+     "integrationType": "string",
+     "datahubId": "string",
+     "integrationId": "string",
+     "id": "string",
+     "name": "string",
+     "orgSlug": "string",
+     "description": "string",
+     "artifact": "object",
+     "hostType": "string",
+     "hub": "object",
+     "metadata": "object",
+     "tags": "array",
+     "commandQueue": "string",
+     "clusterArn": "string",
+     "taskDefinitionArn": "string",
+     "health": "string",
+     "healthErrorCode": "string",
+     "operatingStatus": "string",
+     "networkStatus": "string",
+     "config": "object",
+     "lastSeenAt": "string",
+     "updatedAt": "string",
+     "createdAt": "string",
+     "labels": "array",
+     "protocolSlug": null,
+     "protocolVersion": null,
+     "priority": "integer",
+     "retryBehavior": null,
+     "retryConfiguration": "object",
+     "standby": null,
+     "status": null,
+     "taskScriptTimeoutMins": null,
+     "maxParallelWorkflows": "integer",
+     "pipelineConfig": "object",
+     "stepsConfig": "object",
+     "artifactType": "string",
+     "clusterId": null,
+     "clusterPolicyId": null,
+     "runOnDeleted": "boolean",
+     "masterScriptNamespace": null,
+     "masterScriptVersion": null,
+     "masterScriptSlug": null,
+     "inlineArtifact": null,
+     "revision": "number",
+     "protocolSchema": "string",
+     "triggerType": "string",
+     "triggerCondition": null,
+     "namespace": "string",
+     "slug": "string",
+     "version": "string",
+     "lastUpdatedAt": "string",
+     "otherVersions": "array",
+     "supportedPlatformVersion": "object",
+     "type": "string",
+     "iconPresignedUrl": "string"
+    },
+    "evidence": [
+     "openapi/_original/tetrascience-openapi.json#GET /v1/artifacts/connectors",
+     "openapi/_original/tetrascience-openapi.json#GET /v1/artifacts/connectors/{namespace}",
+     "openapi/_original/tetrascience-openapi.json#GET /v1/data-acquisition/connectors",
+     "openapi/_original/tetrascience-openapi.json#GET /v1/data-acquisition/connectors/{id}",
+     "openapi/_original/tetrascience-openapi.json#GET /v1/pipeline/{pipelineId}",
+     "openapi/_original/tetrascience-openapi.json#PUT /v1/agents/{agentId}/connector",
+     "openapi/_original/tetrascience-openapi.yml#GET /v1/artifacts/connectors",
+     "openapi/_original/tetrascience-openapi.yml#GET /v1/artifacts/connectors/{namespace}",
+     "openapi/_original/tetrascience-openapi.yml#GET /v1/data-acquisition/connectors",
+     "openapi/_original/tetrascience-openapi.yml#GET /v1/data-acquisition/connectors/{id}",
+     "openapi/_original/tetrascience-openapi.yml#GET /v1/pipeline/{pipelineId}",
+     "openapi/_original/tetrascience-openapi.yml#PUT /v1/agents/{agentId}/connector"
+    ]
+   },
+   "weld": {
+    "segments": [
+     "connections"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/weld-connect-openapi.json#DELETE /connections/{id}",
+     "openapi/_original/weld-connect-openapi.json#GET /connections"
+    ]
+   }
+  },
+  "sync_job": {
+   "3shake": {
+    "segments": [
+     "jobs",
+     "run"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "job_id": "integer",
+     "parameters": "array",
+     "task_name": "string",
+     "category": "string",
+     "subcategory": "string",
+     "message": "string",
+     "id": "integer",
+     "started_at": "string",
+     "ended_at": "string",
+     "status": "string",
+     "trigger": "string"
+    },
+    "evidence": [
+     "openapi/_original/3shake-reckoner-external-api-openapi.json#GET /workflows/{workflowId}/jobs",
+     "openapi/_original/3shake-reckoner-external-api-openapi.json#GET /workflows/{workflowId}/jobs/{jobId}",
+     "openapi/_original/3shake-reckoner-external-api-openapi.json#POST /workflows/{workflowId}/run"
+    ]
+   },
+   "ai-squared": {
+    "segments": [
+     "syncs"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "id": "string",
+     "type": "string",
+     "attributes": "object",
+     "source_id": "integer",
+     "destination_id": "integer",
+     "model_id": "integer",
+     "schedule_type": "string",
+     "configuration": "object",
+     "stream_name": "string",
+     "sync_mode": "string",
+     "sync_interval": "integer",
+     "sync_interval_unit": "string",
+     "cron_expression": "string",
+     "cursor_field": "string"
+    },
+    "evidence": [
+     "openapi/_original/ai-squared-openapi.yml#DELETE /api/v1/syncs/{id}",
+     "openapi/_original/ai-squared-openapi.yml#GET /api/v1/syncs",
+     "openapi/_original/ai-squared-openapi.yml#GET /api/v1/syncs/{id}",
+     "openapi/_original/ai-squared-openapi.yml#POST /api/v1/syncs",
+     "openapi/_original/ai-squared-openapi.yml#PUT /api/v1/syncs/{id}",
+     "openapi/_original/create_sync.yaml#POST /api/v1/syncs",
+     "openapi/_original/delete_sync.yaml#DELETE /api/v1/syncs/{id}",
+     "openapi/_original/get_syncs.yaml#GET /api/v1/syncs",
+     "openapi/_original/show_sync.yaml#GET /api/v1/syncs/{id}",
+     "openapi/_original/update_sync.yaml#PUT /api/v1/syncs/{id}"
+    ]
+   },
+   "airflow": {
+    "segments": [
+     "jobs"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "id": "integer",
+     "dag_id": null,
+     "state": null,
+     "job_type": null,
+     "start_date": null,
+     "end_date": null,
+     "latest_heartbeat": null,
+     "executor_class": null,
+     "hostname": null,
+     "unixname": null,
+     "dag_display_name": null
+    },
+    "evidence": [
+     "openapi/_original/airflow-openapi.yml#GET /api/v2/jobs"
+    ]
+   },
+   "airweave": {
+    "segments": [
+     "jobs",
+     "run"
+    ],
+    "operations": [
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "source_connection_id": "string",
+     "status": "string",
+     "started_at": [
+      "string",
+      "null"
+     ],
+     "completed_at": [
+      "string",
+      "null"
+     ],
+     "duration_seconds": [
+      "number",
+      "null"
+     ],
+     "entities_inserted": "integer",
+     "entities_updated": "integer",
+     "entities_deleted": "integer",
+     "entities_failed": "integer",
+     "error": [
+      "string",
+      "null"
+     ],
+     "error_category": null,
+     "error_details": [
+      "object",
+      "null"
+     ]
+    },
+    "evidence": [
+     "openapi/_original/airweave-openapi.json#GET /source-connections/{source_connection_id}/jobs",
+     "openapi/_original/airweave-openapi.json#POST /source-connections/{source_connection_id}/run"
+    ]
+   },
+   "alteryx": {
+    "segments": [
+     "jobs"
+    ],
+    "operations": [
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "createDate": "string",
+     "status": "string",
+     "priority": "string",
+     "workerTag": "string",
+     "runWithE2": "boolean",
+     "appId": "string",
+     "createDateTime": "string",
+     "disposition": "string",
+     "outputs": "array",
+     "messages": "array",
+     "credentialId": "string",
+     "questions": "array"
+    },
+    "evidence": [
+     "openapi/_original/alteryx-server-api-v3.yml#GET /v3/workflows/{workflowId}/jobs",
+     "openapi/_original/alteryx-server-api-v3.yml#POST /v3/workflows/{workflowId}/jobs"
+    ]
+   },
+   "altimate-ai": {
+    "segments": [
+     "runs",
+     "jobs",
+     "sync",
+     "run",
+     "executions"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "POST item"
+    ],
+    "properties": {
+     "periodic_task_ids": null,
+     "ok": "boolean",
+     "job_id": "string",
+     "job_name": null,
+     "number_of_runs": null,
+     "annualized_cost": null,
+     "number_of_steps": null,
+     "warehouses": null,
+     "insights": null,
+     "avg_total_execution_time": null,
+     "median_total_execution_time": null,
+     "max_total_execution_time": null,
+     "p90_total_execution_time": null,
+     "job_frequency": null,
+     "environment": null,
+     "avg_local_spill": null,
+     "avg_remote_spill": null,
+     "session_id": "integer",
+     "start_time": "string",
+     "end_time": "string",
+     "warehouse_name": "string",
+     "warehouse_size": null,
+     "user_name": "string",
+     "job_execution_time": "string",
+     "cost": "string",
+     "total_data_scanned": "string",
+     "total_data_sent_over_network": "string",
+     "total_local_spill": "string",
+     "total_remote_spill": "string",
+     "command_display": "string",
+     "run_id": "string",
+     "query_cost": "number",
+     "bytes_scanned": "integer",
+     "execution_time": "number",
+     "timestamp": "string",
+     "success_count": "integer",
+     "total_count": "integer",
+     "annotation": null,
+     "query_parameterized_hashes": "array",
+     "error_messages": "array",
+     "execution_statuses": "array",
+     "query_summary": "string",
+     "execution_status": "string",
+     "attempt_number": "integer",
+     "name": "string",
+     "database_name": "string",
+     "schema_name": "string",
+     "task_database_id": null,
+     "task_schema_id": null,
+     "root_task_id": null,
+     "graph_version": null,
+     "graph_run_group_id": null,
+     "state": "string",
+     "scheduled_from": null,
+     "scheduled_time": "string",
+     "query_start_time": null,
+     "completed_time": null,
+     "queued_time_ms": null,
+     "execution_time_ms": null,
+     "error_code": null,
+     "error_message": null,
+     "return_value": null,
+     "query_id": "string",
+     "condition_text": null,
+     "config": null,
+     "backfill_info": null,
+     "sync_triggered": "boolean",
+     "task_id": null,
+     "projects_queued": "integer",
+     "environments_queued": "integer",
+     "message": null,
+     "id": "integer",
+     "rule_id": "integer",
+     "status": "string",
+     "result": null,
+     "error": null,
+     "executed_at": null,
+     "created_at": "string",
+     "jobs": "array",
+     "answer": "array",
+     "type": "string",
+     "manifest_path": null,
+     "catalog_path": null,
+     "project_path": null,
+     "manifest": null,
+     "catalog": null,
+     "check_names": "array",
+     "workspace_id": "string",
+     "workspace_name": null,
+     "instance_id": null,
+     "creator_id": null,
+     "creator_user_name": null,
+     "total_runs": "integer",
+     "successful_runs": "integer",
+     "failed_runs": "integer",
+     "success_rate": "number",
+     "avg_duration_seconds": "number",
+     "last_run_time": null,
+     "total_dbus": "number",
+     "estimated_cost_usd": "number",
+     "total_cloud_cost": null,
+     "annualized_total_cost": "number",
+     "auto_tune_enabled": "boolean",
+     "realized_savings": "number",
+     "estimated_annualized_savings": "number",
+     "run_as_user_name": null,
+     "created_time": null,
+     "settings": null,
+     "schedule_id": "string",
+     "run_at": "string",
+     "recipients_count": null,
+     "sent_count": null,
+     "failed_count": null,
+     "test_case_name": "string",
+     "test_case_description": null,
+     "test_case_tags": null,
+     "overall_score": "number",
+     "turn_results": "array",
+     "run_name": null,
+     "tenant": "string",
+     "trace_id": null,
+     "datamate_ids_used": null,
+     "knowledge_base_ids_used": null,
+     "tools_invoked": null,
+     "knowledge_bases_queried": null,
+     "test_case_id": "string",
+     "uuid": null,
+     "dataset_path": null,
+     "output_path": null,
+     "agent_name": "string",
+     "model_name": null,
+     "dataset_size": "integer",
+     "n_attempts": "integer",
+     "n_concurrent_trials": "integer",
+     "accuracy": null,
+     "pass_at_k": null,
+     "commit_hash": "string",
+     "username": "string",
+     "use_mcp": "boolean",
+     "n_resolved": null,
+     "n_unresolved": null,
+     "tasks_attempted": null,
+     "total_cost_usd": null,
+     "total_tokens": null,
+     "avg_runtime_ms": null
+    },
+    "evidence": [
+     "openapi/_original/altimate-ai-openapi-original.json#DELETE /api/ade-bench/runs/{run_id}",
+     "openapi/_original/altimate-ai-openapi-original.json#GET /api/ade-bench/runs",
+     "openapi/_original/altimate-ai-openapi-original.json#GET /api/ade-bench/runs/{run_id}",
+     "openapi/_original/altimate-ai-openapi-original.json#GET /api/v1/alerts/rules/{rule_id}/runs",
+     "openapi/_original/altimate-ai-openapi-original.json#GET /api/v1/databricks/jobs",
+     "openapi/_original/altimate-ai-openapi-original.json#GET /api/v1/databricks/jobs/{job_id}",
+     "openapi/_original/altimate-ai-openapi-original.json#GET /playground/schedules/{schedule_id}/runs",
+     "openapi/_original/altimate-ai-openapi-original.json#GET /query/jobs",
+     "openapi/_original/altimate-ai-openapi-original.json#GET /query/jobs/executions/{job_id}",
+     "openapi/_original/altimate-ai-openapi-original.json#GET /query/v2/snowflake_jobs/dbt_filters/jobs/{workflow_id}",
+     "openapi/_original/altimate-ai-openapi-original.json#GET /query/v2/snowflake_jobs/runs/{workflow_id}",
+     "openapi/_original/altimate-ai-openapi-original.json#GET /query/v2/tasks/runs"
+    ]
+   },
+   "amazon-entity-resolution": {
+    "segments": [
+     "jobs"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "endTime": null,
+     "errorDetails": null,
+     "jobId": null,
+     "metrics": null,
+     "startTime": null,
+     "status": null,
+     "jobs": null,
+     "nextToken": null
+    },
+    "evidence": [
+     "openapi/_original/amazon-entity-resolution-openapi.yml#GET /matchingworkflows/{workflowName}/jobs",
+     "openapi/_original/amazon-entity-resolution-openapi.yml#GET /matchingworkflows/{workflowName}/jobs/{jobId}",
+     "openapi/_original/amazon-entity-resolution-openapi.yml#POST /matchingworkflows/{workflowName}/jobs"
+    ]
+   },
+   "amazon-glue-databrew": {
+    "segments": [
+     "jobs"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "CreateDate": null,
+     "CreatedBy": null,
+     "DatasetName": null,
+     "EncryptionKeyArn": null,
+     "EncryptionMode": null,
+     "Name": null,
+     "Type": null,
+     "LastModifiedBy": null,
+     "LastModifiedDate": null,
+     "LogSubscription": null,
+     "MaxCapacity": null,
+     "MaxRetries": null,
+     "Outputs": null,
+     "DataCatalogOutputs": null,
+     "DatabaseOutputs": null,
+     "ProjectName": null,
+     "ProfileConfiguration": null,
+     "ValidationConfigurations": null,
+     "RecipeReference": "object",
+     "ResourceArn": null,
+     "RoleArn": null,
+     "Tags": null,
+     "Timeout": null,
+     "JobSample": null,
+     "Jobs": null,
+     "NextToken": null
+    },
+    "evidence": [
+     "openapi/_original/amazon-glue-databrew-openapi.yaml#DELETE /jobs/{name}",
+     "openapi/_original/amazon-glue-databrew-openapi.yaml#GET /jobs",
+     "openapi/_original/amazon-glue-databrew-openapi.yaml#GET /jobs/{name}"
+    ]
+   },
+   "apache-airflow": {
+    "segments": [
+     "jobs"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "id": "integer",
+     "dag_id": null,
+     "state": null,
+     "job_type": null,
+     "start_date": null,
+     "end_date": null,
+     "latest_heartbeat": null,
+     "executor_class": null,
+     "hostname": null,
+     "unixname": null,
+     "dag_display_name": null
+    },
+    "evidence": [
+     "openapi/_original/apache-airflow-openapi.yml#GET /api/v2/jobs"
+    ]
+   },
+   "apache-hive": {
+    "segments": [
+     "jobs"
+    ],
+    "operations": [
+     "GET item"
+    ],
+    "properties": {
+     "id": "string",
+     "status": "string",
+     "percentComplete": "string",
+     "query": "string",
+     "database": "string",
+     "statusdir": "string"
+    },
+    "evidence": [
+     "openapi/_original/apache-hive-webhcat-openapi.yml#GET /jobs/{jobId}"
+    ]
+   },
+   "census": {
+    "segments": [
+     "syncs"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "integer",
+     "label": "string",
+     "operation": "string",
+     "source_attributes": "object",
+     "destination_attributes": "object",
+     "schedule": "object",
+     "paused": "boolean",
+     "created_at": "string"
+    },
+    "evidence": [
+     "openapi/_original/census-openapi.yml#DELETE /syncs/{id}",
+     "openapi/_original/census-openapi.yml#GET /syncs",
+     "openapi/_original/census-openapi.yml#GET /syncs/{id}",
+     "openapi/_original/census-openapi.yml#PATCH /syncs/{id}",
+     "openapi/_original/census-openapi.yml#POST /syncs"
+    ]
+   },
+   "cloudquery": {
+    "segments": [
+     "runs",
+     "syncs"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "definition_id": "string",
+     "status": "string",
+     "format": "string",
+     "query": "string",
+     "csv_delimiter": "string",
+     "csv_include_header": "boolean",
+     "created_by_email": "string",
+     "rows_written": "integer",
+     "bytes_written": "integer",
+     "download_url": "string",
+     "error": "string",
+     "created_at": "string",
+     "started_at": "string",
+     "finished_at": "string",
+     "name": "string",
+     "display_name": "string",
+     "source": "string",
+     "destinations": "array",
+     "disabled": "boolean",
+     "schedule": "string",
+     "cpu": "string",
+     "memory": "string",
+     "updated_at": "string",
+     "created_by": "string",
+     "status_reason": "string",
+     "migration": "boolean",
+     "completed_at": "string",
+     "total_rows": "integer",
+     "warnings": "integer",
+     "errors": "integer",
+     "ingested": "boolean",
+     "env": "array",
+     "sync_name": "string",
+     "workers": "array",
+     "config_revision": "integer",
+     "cpu_seconds": "number",
+     "memory_byte_seconds": "number",
+     "network_egress_bytes": "number"
+    },
+    "evidence": [
+     "openapi/_original/cloudquery-openapi.json#DELETE /syncs/{sync_name}",
+     "openapi/_original/cloudquery-openapi.json#DELETE /table-exports/runs/{run_id}",
+     "openapi/_original/cloudquery-openapi.json#GET /sync-destinations/{sync_destination_name}/syncs",
+     "openapi/_original/cloudquery-openapi.json#GET /sync-sources/{sync_source_name}/syncs",
+     "openapi/_original/cloudquery-openapi.json#GET /sync-transformers/{sync_transformer_name}/syncs",
+     "openapi/_original/cloudquery-openapi.json#GET /syncs",
+     "openapi/_original/cloudquery-openapi.json#GET /syncs/{sync_name}",
+     "openapi/_original/cloudquery-openapi.json#GET /syncs/{sync_name}/runs",
+     "openapi/_original/cloudquery-openapi.json#GET /syncs/{sync_name}/runs/{sync_run_id}",
+     "openapi/_original/cloudquery-openapi.json#GET /table-export-definitions/{definition_id}/runs",
+     "openapi/_original/cloudquery-openapi.json#GET /table-exports/runs/{run_id}",
+     "openapi/_original/cloudquery-openapi.json#PATCH /syncs/{sync_name}"
+    ]
+   },
+   "dbt": {
+    "segments": [
+     "jobs",
+     "runs"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/dbt-cloud-administrative-api-openapi.yml#GET /accounts/{accountId}/jobs/",
+     "openapi/_original/dbt-cloud-administrative-api-openapi.yml#GET /accounts/{accountId}/runs/",
+     "openapi/_original/dbt-cloud-administrative-api-openapi.yml#GET /accounts/{accountId}/runs/{runId}/",
+     "openapi/_original/dbt-cloud-administrative-api-openapi.yml#POST /accounts/{accountId}/jobs/"
+    ]
+   },
+   "end-close": {
+    "segments": [
+     "runs"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "scheduled_agent_id": "string",
+     "triggered_by": "string",
+     "triggered_by_user_id": "string",
+     "triggered_by_run_id": "string",
+     "agent_review_task_id": "string",
+     "status": "string",
+     "started_at": "string",
+     "completed_at": "string",
+     "duration_ms": "integer",
+     "error_message": "string",
+     "summary": "string",
+     "model": "string",
+     "total_input_tokens": "integer",
+     "total_output_tokens": "integer",
+     "output_files": "array",
+     "dropped_files": "array",
+     "delivery": "object",
+     "transcript": "array",
+     "created_at": "string"
+    },
+    "evidence": [
+     "openapi/_original/end-close-openapi.json#GET /agents/{id}/runs",
+     "openapi/_original/end-close-openapi.json#GET /agents/{id}/runs/{run_id}",
+     "openapi/_original/end-close-openapi.json#POST /agents/{id}/runs"
+    ]
+   },
+   "feldera": {
+    "segments": [
+     "sync"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/feldera-openapi-original.json#POST /v0/pipelines/{pipeline_name}/checkpoint/sync"
+    ]
+   },
+   "fivetran": {
+    "segments": [
+     "sync"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "force": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/fivetran-openapi.yml#POST /connections/{connectionId}/sync"
+    ]
+   },
+   "flatfile": {
+    "segments": [
+     "jobs",
+     "executions"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "eventId": "string",
+     "success": "boolean",
+     "spaceId": "string",
+     "createdAt": "string",
+     "completedAt": "string",
+     "duration": "integer",
+     "requestTime": "integer",
+     "requestCount": "integer",
+     "memoryUsage": "integer",
+     "topic": "string",
+     "type": "string",
+     "operation": "string",
+     "source": "string",
+     "destination": "string",
+     "config": null,
+     "trigger": "string",
+     "status": "string",
+     "progress": "integer",
+     "fileId": "string",
+     "mode": "string",
+     "input": "object",
+     "subject": null,
+     "outcome": "object",
+     "result": "object",
+     "info": "string",
+     "managed": "boolean",
+     "environmentId": "string",
+     "part": "integer",
+     "partData": "object",
+     "partExecution": "string",
+     "parentId": "string",
+     "predecessorIds": "array",
+     "metadata": "object",
+     "id": "string",
+     "createdBy": "string",
+     "updatedAt": "string",
+     "startedAt": "string",
+     "finishedAt": "string",
+     "outcomeAcknowledgedAt": "string"
+    },
+    "evidence": [
+     "openapi/_original/flatfile-api-openapi.yml#DELETE /jobs/{jobId}",
+     "openapi/_original/flatfile-api-openapi.yml#GET /agents/executions",
+     "openapi/_original/flatfile-api-openapi.yml#GET /jobs",
+     "openapi/_original/flatfile-api-openapi.yml#GET /jobs/{jobId}",
+     "openapi/_original/flatfile-api-openapi.yml#PATCH /jobs/{jobId}",
+     "openapi/_original/flatfile-api-openapi.yml#POST /jobs"
+    ]
+   },
+   "flume-health": {
+    "segments": [
+     "jobs"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "accountId": "integer",
+     "aiEnabled": "boolean",
+     "aiWorkflowSubmitted": "boolean",
+     "created": "string",
+     "dataType": "string",
+     "destinationEndpoint": "object",
+     "id": "integer",
+     "ignoreObjectInstances": "boolean",
+     "name": "string",
+     "sourceEndpoints": "array",
+     "status": "string",
+     "supplementalDataTypes": "array",
+     "updated": "string",
+     "destinationEndpointId": "integer",
+     "sourceEndpointIds": "array"
+    },
+    "evidence": [
+     "openapi/_original/flume-health-openapi.json#GET /api/v2/trades/jobs",
+     "openapi/_original/flume-health-openapi.json#GET /api/v2/trades/jobs/{id}",
+     "openapi/_original/flume-health-openapi.json#PATCH /api/v2/trades/jobs/{id}",
+     "openapi/_original/flume-health-openapi.json#POST /api/v2/trades/jobs"
+    ]
+   },
+   "google-cloud-dataflow": {
+    "segments": [
+     "jobs"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "jobs": "array",
+     "nextPageToken": "string",
+     "failedLocation": "array",
+     "id": "string",
+     "projectId": "string",
+     "name": "string",
+     "type": "string",
+     "currentState": "string",
+     "currentStateTime": "string",
+     "requestedState": "string",
+     "createTime": "string",
+     "startTime": "string",
+     "environment": "object",
+     "steps": "array",
+     "stepsLocation": "string",
+     "stageStates": "array",
+     "pipelineDescription": "object",
+     "labels": "object",
+     "location": "string",
+     "createdFromSnapshotId": "string",
+     "replacedByJobId": "string",
+     "replaceJobId": "string",
+     "clientRequestId": "string",
+     "tempFiles": "array",
+     "jobMetadata": "object",
+     "runtimeUpdatableParams": "object",
+     "serviceResources": "object",
+     "satisfiesPzi": "boolean",
+     "satisfiesPzs": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/google-cloud-dataflow-api-openapi.yml#GET /v1b3/projects/{projectId}/jobs",
+     "openapi/_original/google-cloud-dataflow-api-openapi.yml#GET /v1b3/projects/{projectId}/jobs/{jobId}",
+     "openapi/_original/google-cloud-dataflow-api-openapi.yml#GET /v1b3/projects/{projectId}/locations/{location}/jobs",
+     "openapi/_original/google-cloud-dataflow-api-openapi.yml#GET /v1b3/projects/{projectId}/locations/{location}/jobs/{jobId}",
+     "openapi/_original/google-cloud-dataflow-api-openapi.yml#POST /v1b3/projects/{projectId}/jobs",
+     "openapi/_original/google-cloud-dataflow-api-openapi.yml#POST /v1b3/projects/{projectId}/locations/{location}/jobs",
+     "openapi/_original/google-cloud-dataflow-api-openapi.yml#PUT /v1b3/projects/{projectId}/jobs/{jobId}",
+     "openapi/_original/google-cloud-dataflow-api-openapi.yml#PUT /v1b3/projects/{projectId}/locations/{location}/jobs/{jobId}"
+    ]
+   },
+   "hightouch": {
+    "segments": [
+     "syncs",
+     "runs",
+     "run"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "flowsEnqueued": "number",
+     "fullRerun": "boolean",
+     "stats": "object",
+     "finishedAt": "string",
+     "startedAt": "string",
+     "createdAt": "string",
+     "error": "string",
+     "status": "string",
+     "graphId": "string",
+     "id": "string",
+     "region": "string",
+     "enrichedRows": "number",
+     "isFullEnrichment": "boolean",
+     "durationMs": "number",
+     "enrichedAt": "string",
+     "slug": "string",
+     "workspaceId": "number",
+     "updatedAt": "string",
+     "createdBy": null,
+     "updatedBy": null,
+     "destinationId": "number",
+     "modelId": "number",
+     "configuration": "object",
+     "schedule": "object",
+     "disabled": "boolean",
+     "lastRunAt": "string",
+     "referencedColumns": "array",
+     "primaryKey": "string",
+     "externalSegment": "object",
+     "tags": "object",
+     "syncTemplateId": "number",
+     "syncTemplateOverrides": "object",
+     "querySize": "number",
+     "completionRatio": "number",
+     "plannedRows": "object",
+     "successfulRows": "object",
+     "failedRows": "object",
+     "syncId": "number",
+     "syncRunId": "number"
+    },
+    "evidence": [
+     "openapi/_original/hightouch-openapi.json#DELETE /syncs/{syncId}",
+     "openapi/_original/hightouch-openapi.json#GET /idr/{graphId}/runs",
+     "openapi/_original/hightouch-openapi.json#GET /models/{modelId}/match-booster/runs",
+     "openapi/_original/hightouch-openapi.json#GET /sync-sequences/runs/{syncSequenceRunId}",
+     "openapi/_original/hightouch-openapi.json#GET /syncs",
+     "openapi/_original/hightouch-openapi.json#GET /syncs/{syncId}",
+     "openapi/_original/hightouch-openapi.json#GET /syncs/{syncId}/runs",
+     "openapi/_original/hightouch-openapi.json#PATCH /syncs/{syncId}",
+     "openapi/_original/hightouch-openapi.json#POST /decision-engine/flow/{flowId}/run",
+     "openapi/_original/hightouch-openapi.json#POST /syncs"
+    ]
+   },
+   "hotglue": {
+    "segments": [
+     "jobs"
+    ],
+    "operations": [
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {
+     "job_id": "string",
+     "env_id": "string",
+     "job_name": "string",
+     "tenant": "string",
+     "started_by": "string",
+     "flow": "string",
+     "s3_root": "string",
+     "start_time": "string",
+     "state": "object",
+     "tap": "string",
+     "status": "string",
+     "message": "string",
+     "last_updated": "string",
+     "flow_id": "string",
+     "external_job_id": "string",
+     "scheduled_job": "boolean",
+     "processed_rows": "integer",
+     "override_start_date": "string",
+     "override_selected_filters": "object",
+     "reset_source_state": "boolean",
+     "streaming_job": "boolean",
+     "override_selected_tables": "object",
+     "override_field_map": "object",
+     "override_end_date": "string",
+     "override_source_config": "object",
+     "override_target_config": "object",
+     "ignore_parallel_jobs": "boolean",
+     "queue_if_active_job": "boolean",
+     "environment_variables": "object",
+     "connector_id": "string",
+     "job_type": "string",
+     "override_connector_config": "object"
+    },
+    "evidence": [
+     "openapi/_original/hotglue-openapi.json#GET /{env_id}/jobs",
+     "openapi/_original/hotglue-openapi.json#GET /{env_id}/{flow_id}/{tenant}/jobs",
+     "openapi/_original/hotglue-openapi.json#POST /v2/{env_id}/{flow_id}/{tenant}/jobs",
+     "openapi/_original/hotglue-openapi.json#POST /{env_id}/{flow_id}/{tenant}/jobs"
+    ]
+   },
+   "improvado": {
+    "segments": [
+     "run"
+    ],
+    "operations": [
+     "POST collection",
+     "PUT collection"
+    ],
+    "properties": {
+     "id": "integer",
+     "title": "string",
+     "connection_id": "integer",
+     "account_id": "integer",
+     "account_name": "string",
+     "account_entity_id": "integer",
+     "account_embedded_id": [
+      "integer",
+      "null"
+     ],
+     "template": "object",
+     "data_table": "object",
+     "fields": "array",
+     "created_at": "string",
+     "last_sync": "string",
+     "status": "string",
+     "error_text": "string",
+     "schedules_limit": "integer",
+     "scheduling": "array",
+     "additional_params": "array",
+     "sync_historical_data": [
+      "string",
+      "null"
+     ],
+     "date_from": "string",
+     "date_to": "string"
+    },
+    "evidence": [
+     "openapi/_original/improvado-openapi.yml#POST /api/v3/extracts/{id}/run",
+     "openapi/_original/improvado-openapi.yml#PUT /api/v3/loads/{id}/run"
+    ]
+   },
+   "informatica": {
+    "segments": [
+     "job"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "taskId": "string",
+     "taskType": "string",
+     "runId": "integer",
+     "@type": "string",
+     "taskName": "string",
+     "callbackUrl": "string",
+     "runtime": "object"
+    },
+    "evidence": [
+     "openapi/_original/informatica-platform-rest-api-openapi.yml#POST /saas/api/v2/job"
+    ]
+   },
+   "infoworks": {
+    "segments": [
+     "jobs",
+     "runs",
+     "run"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT collection"
+    ],
+    "properties": {
+     "message": "string",
+     "action": "string",
+     "retention_period_in_days": "integer",
+     "collection_group_name": "string",
+     "last_cleanup_at": "string",
+     "limit": "integer",
+     "offset": "integer",
+     "links": "object",
+     "total_count": "integer",
+     "created_by": "string",
+     "created_by_user_email": "string",
+     "created_by_user_name": "string",
+     "domain_id": "string",
+     "domain_name": "string",
+     "is_paused": "boolean",
+     "last_exec_end_time": "string",
+     "last_exec_start_time": "string",
+     "last_exec_status": "string",
+     "workflow_id": "string",
+     "workflow_name": "string",
+     "id": "string",
+     "build_number": "integer",
+     "user_auth_token": "string",
+     "created_at": "string",
+     "modified_at": "string",
+     "modified_by": "string",
+     "triggered_at": "string",
+     "tasks_status": "array",
+     "workflow_status": "object",
+     "triggered_by": "object",
+     "build_id": "integer",
+     "name": "string",
+     "status": "string",
+     "percentage": "integer",
+     "type": "string",
+     "entity_id": "string",
+     "entity_type": "string",
+     "sub_entity_id": "string",
+     "sub_entity_type": "string",
+     "duration": "integer",
+     "cluster_id": "string",
+     "compute_id": "string",
+     "compute_name": "string",
+     "last_updated": "string",
+     "processed_at": "string",
+     "result": "string",
+     "job_type": "string",
+     "purge_metadata": "boolean",
+     "version_id": "string",
+     "updated_pipeline_parameters": "array",
+     "job_progress": "integer",
+     "workflow_version_id": "string",
+     "child_workflow_ids": "array",
+     "workflow_graph": "object",
+     "workflow_parameters": "array",
+     "date_range": null,
+     "order_by": "string",
+     "sort_by": "string",
+     "run_time_hour": "integer",
+     "domain_ids": "array",
+     "source_ids": "array",
+     "job_types": "array",
+     "additional_filters": "object",
+     "custom_tags": "array",
+     "build_started_at": "string",
+     "build_ended_at": "string",
+     "queue_info": "string",
+     "job_list": "array"
+    },
+    "evidence": [
+     "openapi/_original/infoworks-rest-api-v3-openapi.yml#GET /admin/jobs",
+     "openapi/_original/infoworks-rest-api-v3-openapi.yml#GET /admin/jobs/{job_id}",
+     "openapi/_original/infoworks-rest-api-v3-openapi.yml#GET /admin/metadata-cleanup/policies/jobs",
+     "openapi/_original/infoworks-rest-api-v3-openapi.yml#GET /admin/workflows/runs",
+     "openapi/_original/infoworks-rest-api-v3-openapi.yml#GET /admin/workflows/{workflow_id}/runs/{run_id}",
+     "openapi/_original/infoworks-rest-api-v3-openapi.yml#GET /domains/{domain_id}/pipeline-groups/{pipeline_group_id}/jobs",
+     "openapi/_original/infoworks-rest-api-v3-openapi.yml#GET /domains/{domain_id}/pipeline-groups/{pipeline_group_id}/jobs/{job_id}",
+     "openapi/_original/infoworks-rest-api-v3-openapi.yml#GET /domains/{domain_id}/pipelines/{pipeline_id}/jobs",
+     "openapi/_original/infoworks-rest-api-v3-openapi.yml#GET /domains/{domain_id}/pipelines/{pipeline_id}/jobs/{job_id}",
+     "openapi/_original/infoworks-rest-api-v3-openapi.yml#GET /domains/{domain_id}/workflows/{workflow_id}/runs",
+     "openapi/_original/infoworks-rest-api-v3-openapi.yml#GET /domains/{domain_id}/workflows/{workflow_id}/runs/{workflow_run_id}",
+     "openapi/_original/infoworks-rest-api-v3-openapi.yml#GET /prodops/jobs/{job_id}"
+    ]
+   },
+   "keboola": {
+    "segments": [
+     "jobs",
+     "job"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT collection"
+    ],
+    "properties": {
+     "PartitionKey": "string",
+     "RowKey": "string",
+     "projectId": "string",
+     "jobId": "string",
+     "durationSeconds": "number",
+     "id": "string",
+     "runId": "string",
+     "branchId": "string",
+     "project": "object",
+     "token": "object",
+     "status": "string",
+     "desiredStatus": "string",
+     "component": "string",
+     "mode": "string",
+     "tag": "string",
+     "config": "string",
+     "configRow": "string",
+     "configData": "object",
+     "result": "object",
+     "createdTime": "string",
+     "startTime": "string",
+     "endTime": "string",
+     "delayedStartTime": "string",
+     "isFinished": "boolean",
+     "url": "string",
+     "variableValuesId": "string",
+     "variableValuesData": "object",
+     "backend": "object",
+     "metrics": "object",
+     "type": "string",
+     "orchestrationTaskId": "string",
+     "previousJobId": "string",
+     "onlyOrchestrationTaskIds": "array",
+     "configRowIds": "array",
+     "executor": "string",
+     "delay": "integer"
+    },
+    "evidence": [
+     "openapi/_original/keboola-billing-api-openapi.yml#PUT /duration/job",
+     "openapi/_original/keboola-queue-api-openapi.yml#GET /jobs",
+     "openapi/_original/keboola-queue-api-openapi.yml#GET /jobs/{jobId}",
+     "openapi/_original/keboola-queue-api-openapi.yml#GET /search/jobs",
+     "openapi/_original/keboola-queue-api-openapi.yml#POST /jobs"
+    ]
+   },
+   "metaplane": {
+    "segments": [
+     "run",
+     "sync"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "testIds": "array"
+    },
+    "evidence": [
+     "openapi/_original/metaplane-api-openapi.yml#POST /v1/connections/{connectionId}/sync",
+     "openapi/_original/metaplane-api-openapi.yml#POST /v1/monitors/run"
+    ]
+   },
+   "netter": {
+    "segments": [
+     "runs",
+     "run",
+     "sync"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "input": "object",
+     "id": "string",
+     "automation_id": "string",
+     "triggered_by": "string",
+     "triggered_by_user_id": null,
+     "status": "string",
+     "started_at": "string",
+     "ended_at": null,
+     "item_count_total": "integer",
+     "item_count_failed": "integer",
+     "error_summary": null,
+     "node_id": "string",
+     "items_in": "integer",
+     "items_out": "integer",
+     "items_failed": "integer",
+     "duration_ms": "integer",
+     "input_sample": null,
+     "output_sample": null,
+     "error_sample": null,
+     "last_synced_at": null,
+     "source_row_count": "integer",
+     "overlay_count": "integer",
+     "state": "string",
+     "matched": "integer",
+     "unmatched": "integer",
+     "total_rows": "integer",
+     "project_id": "string",
+     "company_id": "string",
+     "user_id": "string",
+     "root_step_id": null,
+     "error": null,
+     "trigger_source": "string",
+     "source_run_id": null,
+     "temporal_workflow_id": null,
+     "force_full": "boolean",
+     "finished_at": null,
+     "step_runs": "array",
+     "total_rows_processed": "integer",
+     "step_count": "integer",
+     "incremental_count": "integer",
+     "full_count": "integer"
+    },
+    "evidence": [
+     "openapi/_original/netter-openapi-original.json#GET /api/v1/automations/{automation_id}/runs",
+     "openapi/_original/netter-openapi-original.json#GET /api/v1/automations/{automation_id}/runs/{run_id}",
+     "openapi/_original/netter-openapi-original.json#GET /api/v1/dashboard-data/{dashboard_id}/runs",
+     "openapi/_original/netter-openapi-original.json#GET /api/v1/project-steps/{project_id}/runs",
+     "openapi/_original/netter-openapi-original.json#GET /api/v1/projects/{project_id}/runs",
+     "openapi/_original/netter-openapi-original.json#GET /api/v1/runs/{run_id}",
+     "openapi/_original/netter-openapi-original.json#GET /api/v1/steps/project/{project_id}/runs",
+     "openapi/_original/netter-openapi-original.json#GET /api/v1/steps/run/{run_id}",
+     "openapi/_original/netter-openapi-original.json#POST /api/v1/apps/{app_id}/automations/{automation_id}/run",
+     "openapi/_original/netter-openapi-original.json#POST /api/v1/attributes/{definition_id}/automation/sync",
+     "openapi/_original/netter-openapi-original.json#POST /api/v1/automations/{automation_id}/run",
+     "openapi/_original/netter-openapi-original.json#POST /api/v1/dashboard-data/{dashboard_id}/pipelines/{pipeline_id}/runs"
+    ]
+   },
+   "nexla": {
+    "segments": [
+     "sync"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/nexla-genai-mcpaas-openapi.json#POST /v1/toolsets/{tool_set_id}/gateway/mcp-servers/{server_id}/sync",
+     "openapi/_original/nexla-genai-mcpaas.json#POST /v1/toolsets/{tool_set_id}/gateway/mcp-servers/{server_id}/sync"
+    ]
+   },
+   "oneschema": {
+    "segments": [
+     "jobs"
+    ],
+    "operations": [
+     "GET item"
+    ],
+    "properties": {
+     "id": "integer",
+     "status": "string",
+     "sheet_export_id": "integer"
+    },
+    "evidence": [
+     "openapi/_original/oneschema-sheets-openapi.yml#GET /v1/sheets/{sheet_id}/export-file-async/jobs/{export_job_id}"
+    ]
+   },
+   "oracle-goldengate": {
+    "segments": [
+     "jobs"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "POST item",
+     "PUT item"
+    ],
+    "properties": {
+     "id": "integer",
+     "name": "string",
+     "description": "string",
+     "groupIds": "array",
+     "profileId": "integer",
+     "status": "string",
+     "runId": "integer",
+     "jobId": "integer",
+     "startTime": "string",
+     "endTime": "string",
+     "profileOverrides": "object",
+     "jobName": "string",
+     "totalComparePairs": "integer",
+     "inSyncCount": "integer",
+     "outOfSyncCount": "integer",
+     "failedCount": "integer",
+     "repairMode": "string",
+     "rowsRepaired": "integer",
+     "rowsFailed": "integer"
+    },
+    "evidence": [
+     "openapi/_original/oracle-goldengate-veridata-rest-api-openapi.yml#DELETE /services/configuration/jobs/{Id}",
+     "openapi/_original/oracle-goldengate-veridata-rest-api-openapi.yml#GET /services/configuration/jobs",
+     "openapi/_original/oracle-goldengate-veridata-rest-api-openapi.yml#GET /services/configuration/jobs/{Id}",
+     "openapi/_original/oracle-goldengate-veridata-rest-api-openapi.yml#GET /services/monitoring/jobs",
+     "openapi/_original/oracle-goldengate-veridata-rest-api-openapi.yml#GET /services/monitoring/repair/jobs",
+     "openapi/_original/oracle-goldengate-veridata-rest-api-openapi.yml#POST /services/configuration/jobs",
+     "openapi/_original/oracle-goldengate-veridata-rest-api-openapi.yml#POST /services/execution/jobs/{Id}",
+     "openapi/_original/oracle-goldengate-veridata-rest-api-openapi.yml#POST /services/repair/jobs/{runId}",
+     "openapi/_original/oracle-goldengate-veridata-rest-api-openapi.yml#PUT /services/configuration/jobs/{Id}"
+    ]
+   },
+   "pingcap": {
+    "segments": [
+     "jobs"
+    ],
+    "operations": [
+     "GET item"
+    ],
+    "properties": {
+     "col": "string",
+     "data_type": "string",
+     "nullable": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/tidb-chat2data-api-openapi.yml#GET /v2/jobs/{job_id}"
+    ]
+   },
+   "polytomic": {
+    "segments": [
+     "syncs",
+     "executions"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "active": "boolean",
+     "created_at": "string",
+     "created_by": "object",
+     "id": "string",
+     "mode": "string",
+     "model_ids": "array",
+     "name": "string",
+     "only_enrich_updates": "boolean",
+     "organization_id": "string",
+     "schedule": "object",
+     "skip_initial_backfill": "boolean",
+     "sync_all_records": "boolean",
+     "target_connection_id": "string",
+     "target_object": "string",
+     "updated_at": "string",
+     "updated_by": "object",
+     "encryption_passphrase": "string",
+     "fields": "array",
+     "filter_logic": "string",
+     "filters": "array",
+     "identity": "object",
+     "override_fields": "array",
+     "overrides": "array",
+     "policies": "array",
+     "target": "object",
+     "status": "string",
+     "identities": [
+      "array",
+      "null"
+     ],
+     "resync": "boolean",
+     "test": "boolean",
+     "completed_at": [
+      "string",
+      "null"
+     ],
+     "counts": "object",
+     "errors": "array",
+     "started_at": [
+      "string",
+      "null"
+     ],
+     "type": "string",
+     "additional_schedules": [
+      "array",
+      "null"
+     ],
+     "automatically_add_new_fields": "string",
+     "automatically_add_new_objects": "string",
+     "concurrency_limit": [
+      "integer",
+      "null"
+     ],
+     "data_cutoff_timestamp": [
+      "string",
+      "null"
+     ],
+     "default_schedule": "object",
+     "destination_configuration": [
+      "object",
+      "null"
+     ],
+     "destination_connection_id": "string",
+     "disable_record_timestamps": "boolean",
+     "normalize_names": "string",
+     "resync_concurrency_limit": [
+      "integer",
+      "null"
+     ],
+     "source_configuration": [
+      "object",
+      "null"
+     ],
+     "source_connection_id": "string",
+     "schemas": [
+      "array",
+      "null"
+     ],
+     "error_count": "integer",
+     "fetch_mode": "string",
+     "is_partial": "boolean",
+     "is_resync": "boolean",
+     "is_test": "boolean",
+     "output_disposition": "string",
+     "record_count": "integer",
+     "status_message": "string",
+     "warning_count": "integer",
+     "resync_mode": "string"
+    },
+    "evidence": [
+     "openapi/_original/polytomic-openapi.json#DELETE /api/bulk/syncs/{id}",
+     "openapi/_original/polytomic-openapi.json#DELETE /api/syncs/{id}",
+     "openapi/_original/polytomic-openapi.json#GET /api/bulk/syncs",
+     "openapi/_original/polytomic-openapi.json#GET /api/bulk/syncs/{id}",
+     "openapi/_original/polytomic-openapi.json#GET /api/bulk/syncs/{id}/executions",
+     "openapi/_original/polytomic-openapi.json#GET /api/bulk/syncs/{id}/executions/{exec_id}",
+     "openapi/_original/polytomic-openapi.json#GET /api/syncs",
+     "openapi/_original/polytomic-openapi.json#GET /api/syncs/{id}",
+     "openapi/_original/polytomic-openapi.json#GET /api/syncs/{sync_id}/executions",
+     "openapi/_original/polytomic-openapi.json#GET /api/syncs/{sync_id}/executions/{id}",
+     "openapi/_original/polytomic-openapi.json#POST /api/bulk/syncs",
+     "openapi/_original/polytomic-openapi.json#POST /api/bulk/syncs/{id}/executions"
+    ]
+   },
+   "prevedere": {
+    "segments": [
+     "jobs"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "executionId": "string",
+     "definitionId": "string",
+     "name": "string",
+     "jobUrl": "string",
+     "projectId": "string",
+     "primaryIndicator": "object",
+     "created": "string",
+     "lastExecutionDate": "string",
+     "resultsAvailable": "boolean",
+     "companyPrefix": "string",
+     "owner": "string",
+     "project": "string"
+    },
+    "evidence": [
+     "openapi/_original/prevedere-openapi-original.json#GET /discover/jobs"
+    ]
+   },
+   "prophecyio": {
+    "segments": [
+     "run"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "name": "string",
+     "status": "string",
+     "table": "string",
+     "columnName": "string",
+     "index": "integer",
+     "time": "number",
+     "cause": "string",
+     "source": "string",
+     "columnTests": "array",
+     "tableTests": "array",
+     "projectTests": "array"
+    },
+    "evidence": [
+     "openapi/_original/prophecyio-pipelines-openapi.json#POST /api/orchestration/tests/run"
+    ]
+   },
+   "qliksense": {
+    "segments": [
+     "runs",
+     "executions",
+     "run",
+     "jobs",
+     "sync"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "error": "array",
+     "title": "string",
+     "status": "string",
+     "context": "string",
+     "ownerId": "string",
+     "spaceId": "string",
+     "testRun": "boolean",
+     "archived": "boolean",
+     "duration": "integer",
+     "stopTime": "string",
+     "createdAt": "string",
+     "isTestRun": "boolean",
+     "startTime": "string",
+     "updatedAt": "string",
+     "isArchived": "boolean",
+     "executedById": "string",
+     "scheduledStartTime": "string",
+     "metrics": "object",
+     "totalCount": "integer",
+     "currentPageCount": "integer",
+     "unit": "string",
+     "scope": "array",
+     "userId": "string",
+     "blocked": "boolean",
+     "overage": "boolean",
+     "segments": "array",
+     "taskName": "string",
+     "tenantId": "string",
+     "periodEnd": "string",
+     "localUsage": "number",
+     "periodType": "string",
+     "resourceId": "string",
+     "updateTime": "string",
+     "enforcement": "array",
+     "globalUsage": "number",
+     "periodStart": "string",
+     "resourceType": "string",
+     "scopeMapping": "string",
+     "capacityLimit": "number",
+     "closeToOverage": "boolean",
+     "customerFacing": "boolean",
+     "guardrailLimit": "number",
+     "resourceAction": "string",
+     "taskDescription": "string",
+     "blockedEventTime": "string",
+     "overageEventTime": "string",
+     "consumptionReportId": "string",
+     "errors": "array",
+     "result": "string",
+     "alertId": "string",
+     "measures": "array",
+     "accessMode": "string",
+     "bookmarkId": "string",
+     "dimensions": "array",
+     "workflowId": "string",
+     "conditionId": "string",
+     "triggerTime": "string",
+     "evaluationId": "string",
+     "executionType": "string",
+     "conditionStatus": "string",
+     "executionEvaluationStatus": "string",
+     "endTime": "string",
+     "contextId": "string",
+     "resultData": "object",
+     "causalEvent": "object",
+     "dataConditionEvaluatorId": "string",
+     "type": "string",
+     "attributes": "object",
+     "rows": "array",
+     "schema": "array",
+     "endedAt": "string",
+     "workerId": "string",
+     "startedAt": "string",
+     "executedAs": "string",
+     "workerType": "string",
+     "triggeredBy": "string",
+     "log": "string",
+     "taskId": "string",
+     "actionId": "string",
+     "taskMeta": "object",
+     "appId": "string",
+     "files": "array",
+     "eventID": "string",
+     "reloadId": "string",
+     "eventTime": "string",
+     "failedTime": "string",
+     "reloadTime": "string",
+     "targetUser": "object",
+     "workflowID": "string",
+     "bookmarkIds": "array",
+     "failedCount": "integer",
+     "successCount": "integer",
+     "cancelledTime": "string",
+     "sharingTaskID": "string",
+     "cancelledCount": "integer",
+     "totalUploadCount": "integer",
+     "failedUploadCount": "integer",
+     "successUploadCount": "integer",
+     "links": "object",
+     "fileLocations": "array"
+    },
+    "evidence": [
+     "openapi/_original/qliksense-automations.json#GET /api/v1/automations/{id}/runs",
+     "openapi/_original/qliksense-automations.json#GET /api/v1/automations/{id}/runs/{runId}",
+     "openapi/_original/qliksense-automations.json#POST /api/v1/automations/{id}/runs",
+     "openapi/_original/qliksense-automl-predictions.json#POST /api/v1/automl-predictions/{predictionId}/jobs",
+     "openapi/_original/qliksense-consumption.json#GET /api/v1/consumption/executions",
+     "openapi/_original/qliksense-data-alerts.json#DELETE /api/v1/data-alerts/{alertId}/executions/{executionId}",
+     "openapi/_original/qliksense-data-alerts.json#GET /api/v1/data-alerts/{alertId}/executions/{executionId}",
+     "openapi/_original/qliksense-data-alerts.json#GET /api/v1/data-alerts/{taskId}/executions",
+     "openapi/_original/qliksense-knowledgebases.json#POST /api/v1/knowledgebases/{id}/datasources/{datasourceId}/actions/sync",
+     "openapi/_original/qliksense-ml.json#POST /api/v1/ml/deployments/{deploymentId}/aliases/{aliasName}/realtime-predictions/actions/run",
+     "openapi/_original/qliksense-ml.json#POST /api/v1/ml/deployments/{deploymentId}/realtime-predictions/actions/run",
+     "openapi/_original/qliksense-scheduling-tasks.json#GET /api/scheduling/tasks/resources/{id}/runs"
+    ]
+   },
+   "quantemplate": {
+    "segments": [
+     "executions"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "runNumber": "integer",
+     "createdAt": "string",
+     "createdBy": "string",
+     "startedAt": "string",
+     "finishedAt": "string",
+     "version": "integer",
+     "outputs": "array",
+     "status": "string"
+    },
+    "evidence": [
+     "openapi/_original/quantemplate-fabric-openapi.yml#POST /organisations/{organisationId}/pipelines/{pipelineId}/executions"
+    ]
+   },
+   "relex": {
+    "segments": [
+     "job"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "name": "string",
+     "run_id": "string",
+     "run_parent_id": "string",
+     "job_id": "integer",
+     "job_parent_id": "integer",
+     "job_parent_name": "string",
+     "application": "string",
+     "status": "string",
+     "status_message": "string",
+     "progress": "object",
+     "last_update": "string",
+     "start_time": "string",
+     "end_time": "string",
+     "events": "array"
+    },
+    "evidence": [
+     "openapi/_original/relex-monitoring-api-openapi.json#GET /api/v{N}/{customer_id}/events/job"
+    ]
+   },
+   "rivery": {
+    "segments": [
+     "runs",
+     "run"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "next_page": null,
+     "previous_page": null,
+     "page": "integer",
+     "current_page_size": "integer",
+     "total_items": "integer",
+     "account_id": "string",
+     "environment_id": "string",
+     "items": "array",
+     "river_cross_id": "string",
+     "run_id": "string",
+     "datasource_id": "string",
+     "error_description": null,
+     "units": "number",
+     "rpu": "number",
+     "run_group_id": "string",
+     "status": "string",
+     "source_name": "string",
+     "target_name": null,
+     "start_date_utc": "string",
+     "start_date_in_milliseconds": "integer",
+     "end_date_utc": null,
+     "end_date_in_milliseconds": null,
+     "sub_river_id": null,
+     "is_sub_river_run": "boolean",
+     "is_high_frequency": null,
+     "pricing_category": null,
+     "trigger_name": null,
+     "triggered_by_run_id": null,
+     "trigger_chain": null
+    },
+    "evidence": [
+     "openapi/_original/rivery-openapi.json#GET /v1/accounts/{account_id}/environments/{environment_id}/rivers/{river_cross_id}/runs",
+     "openapi/_original/rivery-openapi.json#GET /v1/accounts/{account_id}/environments/{environment_id}/rivers/{river_cross_id}/runs/{run_id}",
+     "openapi/_original/rivery-openapi.json#POST /v1/accounts/{account_id}/environments/{environment_id}/rivers/{river_cross_id}/run",
+     "openapi/_original/rivery-openapi.json#POST /v1/accounts/{account_id}/environments/{environment_id}/rivers/{river_cross_id}/sub_rivers/{sub_river_id}/run"
+    ]
+   },
+   "skyvia": {
+    "segments": [
+     "executions"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "executionId": "integer",
+     "state": "string",
+     "date": "string",
+     "billedTasks": "integer",
+     "testMode": "boolean",
+     "version": "integer",
+     "comment": "string",
+     "started": "string",
+     "executed": "string",
+     "error": "string",
+     "method": "string",
+     "failed": "boolean",
+     "bytes": "integer",
+     "remoteIP": "string",
+     "url": "string",
+     "userAgent": "string",
+     "user": "string",
+     "log": "array",
+     "rows": "integer",
+     "pageToken": "string",
+     "external": "boolean",
+     "runId": "integer",
+     "duration": "integer",
+     "successRows": "integer",
+     "errorRows": "integer",
+     "queueTime": "string",
+     "startTime": "string",
+     "endTime": "string",
+     "result": "string"
+    },
+    "evidence": [
+     "openapi/_original/skyvia-public-api-openapi-original.json#GET /v1/workspaces/{workspaceId}/automations/{automationId}/executions",
+     "openapi/_original/skyvia-public-api-openapi-original.json#GET /v1/workspaces/{workspaceId}/automations/{automationId}/executions/{executionId}",
+     "openapi/_original/skyvia-public-api-openapi-original.json#GET /v1/workspaces/{workspaceId}/endpoints/{endpointId}/executions",
+     "openapi/_original/skyvia-public-api-openapi-original.json#GET /v1/workspaces/{workspaceId}/endpoints/{endpointId}/executions/{recordId}",
+     "openapi/_original/skyvia-public-api-openapi-original.json#GET /v1/workspaces/{workspaceId}/integrations/{integrationId}/executions",
+     "openapi/_original/skyvia-public-api-openapi-original.json#GET /v1/workspaces/{workspaceId}/integrations/{integrationId}/executions/{executionId}",
+     "openapi/_original/skyvia-public-api-openapi-original.json#POST /v1/workspaces/{workspaceId}/integrations/{integrationId}/executions"
+    ]
+   },
+   "spring-batch": {
+    "segments": [
+     "jobs"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "name": "string",
+     "status": "string",
+     "lastExecutionTime": "string",
+     "stepNames": "array",
+     "executionCount": "integer",
+     "lastExecution": "object"
+    },
+    "evidence": [
+     "openapi/_original/spring-batch-openapi.yml#GET /batch/jobs",
+     "openapi/_original/spring-batch-openapi.yml#GET /batch/jobs/{jobName}"
+    ]
+   },
+   "spring-batch-5-1": {
+    "segments": [
+     "jobs"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "name": "string",
+     "status": "string",
+     "lastExecutionTime": "string",
+     "stepNames": "array",
+     "executionCount": "integer",
+     "lastExecution": "object"
+    },
+    "evidence": [
+     "openapi/_original/spring-batch-51-openapi.yml#GET /batch/jobs",
+     "openapi/_original/spring-batch-51-openapi.yml#GET /batch/jobs/{jobName}"
+    ]
+   },
+   "spring-batch-51": {
+    "segments": [
+     "jobs"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "name": "string",
+     "status": "string",
+     "lastExecutionTime": "string",
+     "stepNames": "array",
+     "executionCount": "integer",
+     "lastExecution": "object"
+    },
+    "evidence": [
+     "openapi/_original/spring-batch-51-openapi.yml#GET /batch/jobs",
+     "openapi/_original/spring-batch-51-openapi.yml#GET /batch/jobs/{jobName}"
+    ]
+   },
+   "structify": {
+    "segments": [
+     "run",
+     "runs"
+    ],
+    "operations": [
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {
+     "checkpoint_blob_name": "string",
+     "connector_id": "string",
+     "created_at": "string",
+     "id": "string",
+     "latest_snapshot_blob_name": "string",
+     "status": "string",
+     "triggered_by": null,
+     "chat_session_id": "string",
+     "edited_node_name": "string",
+     "use_node_cache": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/structify-openapi-original.json#GET /connectors/{connector_id}/explore/runs",
+     "openapi/_original/structify-openapi-original.json#POST /dataset/evaluate/run",
+     "openapi/_original/structify-openapi-original.json#POST /workflow-schedule/{schedule_id}/run",
+     "openapi/_original/structify-openapi-original.json#POST /workflow/run"
+    ]
+   },
+   "talend": {
+    "segments": [
+     "executions",
+     "run"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "executionId": "string",
+     "taskId": "string",
+     "status": "string",
+     "startTime": "string",
+     "endTime": "string",
+     "duration": "integer",
+     "engineId": "string",
+     "logUrl": "string",
+     "environmentId": "string",
+     "logLevel": "string"
+    },
+    "evidence": [
+     "openapi/_original/crawler-openapi.json#POST /connections/crawlers/{crawlerId}/run",
+     "openapi/_original/talend-processing-openapi.yml#DELETE /processing/executions/{executionId}",
+     "openapi/_original/talend-processing-openapi.yml#GET /processing/executables/plans/executions",
+     "openapi/_original/talend-processing-openapi.yml#GET /processing/executables/tasks/executions",
+     "openapi/_original/talend-processing-openapi.yml#GET /processing/executions/{executionId}",
+     "openapi/_original/talend-processing-openapi.yml#POST /processing/executables/tasks/executions",
+     "openapi/_original/talend-processing-openapi.yml#POST /processing/executions"
+    ]
+   },
+   "tower": {
+    "segments": [
+     "runs"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "POST item"
+    ],
+    "properties": {
+     "$link": "string",
+     "app_name": "string",
+     "app_slug": "string",
+     "app_version": "string",
+     "attempts": "array",
+     "cancelled_at": [
+      "string",
+      "null"
+     ],
+     "created_at": "string",
+     "created_by": "object",
+     "ended_at": [
+      "string",
+      "null"
+     ],
+     "environment": "string",
+     "exit_code": [
+      "integer",
+      "null"
+     ],
+     "hostname": "string",
+     "initiator": "object",
+     "is_scheduled": "boolean",
+     "num_attempts": "integer",
+     "number": "integer",
+     "parameters": "array",
+     "retry_policy": "object",
+     "run_id": "string",
+     "scheduled_at": "string",
+     "started_at": [
+      "string",
+      "null"
+     ],
+     "starting_at": [
+      "string",
+      "null"
+     ],
+     "status": "string",
+     "status_group": "string",
+     "subdomain": [
+      "string",
+      "null"
+     ],
+     "$schema": "string",
+     "run": "object",
+     "parent_run_id": [
+      "string",
+      "null"
+     ],
+     "$links": "object",
+     "cancelled_child_runs": "integer",
+     "cancelled": "integer",
+     "crashed": "integer",
+     "errored": "integer",
+     "exited": "integer",
+     "pending": "integer",
+     "period": "string",
+     "retrying": "integer",
+     "running": "integer",
+     "scheduled": "integer",
+     "starting": "integer"
+    },
+    "evidence": [
+     "openapi/_original/tower-openapi-original.json#GET /apps/{name}/runs",
+     "openapi/_original/tower-openapi-original.json#GET /apps/{name}/runs/{seq}",
+     "openapi/_original/tower-openapi-original.json#GET /runs",
+     "openapi/_original/tower-openapi-original.json#GET /stats/runs",
+     "openapi/_original/tower-openapi-original.json#POST /apps/{name}/runs",
+     "openapi/_original/tower-openapi-original.json#POST /apps/{name}/runs/{seq}"
+    ]
+   },
+   "unstructured": {
+    "segments": [
+     "jobs",
+     "run"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "workflow_id": "string",
+     "workflow_name": "string",
+     "status": "string",
+     "created_at": "string",
+     "runtime": null,
+     "input_file_ids": null,
+     "output_node_files": null,
+     "job_type": "string"
+    },
+    "evidence": [
+     "openapi/_original/unstructured-platform-api-openapi.yml#GET /api/v1/jobs/",
+     "openapi/_original/unstructured-platform-api-openapi.yml#GET /api/v1/jobs/{job_id}",
+     "openapi/_original/unstructured-platform-api-openapi.yml#POST /api/v1/jobs/",
+     "openapi/_original/unstructured-platform-api-openapi.yml#POST /api/v1/workflows/{workflow_id}/run"
+    ]
+   },
+   "xceptor": {
+    "segments": [
+     "jobs",
+     "runs"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "type": "string",
+     "status": "string",
+     "progress": "integer",
+     "created_at": "string",
+     "updated_at": "string",
+     "completed_at": "string",
+     "error": "object",
+     "metadata": "object",
+     "workflow_id": "string",
+     "datasource_id": "string",
+     "parameters": "object",
+     "triggered_by": "string",
+     "started_at": "string",
+     "duration_ms": "integer",
+     "step_results": "array",
+     "input_parameters": "object"
+    },
+    "evidence": [
+     "openapi/_original/xceptor-rest-api-openapi.yml#DELETE /jobs/{jobId}",
+     "openapi/_original/xceptor-rest-api-openapi.yml#GET /jobs",
+     "openapi/_original/xceptor-rest-api-openapi.yml#GET /jobs/{jobId}",
+     "openapi/_original/xceptor-rest-api-openapi.yml#POST /jobs",
+     "openapi/_original/xceptor-workflow-api-openapi.yml#DELETE /workflows/{workflowId}/runs/{runId}",
+     "openapi/_original/xceptor-workflow-api-openapi.yml#GET /workflows/{workflowId}/runs",
+     "openapi/_original/xceptor-workflow-api-openapi.yml#GET /workflows/{workflowId}/runs/{runId}",
+     "openapi/_original/xceptor-workflow-api-openapi.yml#POST /workflows/{workflowId}/runs"
+    ]
+   }
+  }
+ },
+ "naming": {
+  "path_segment": {
+   "lower": [
+    "3shake",
+    "ai-squared",
+    "airbyte",
+    "airflow",
+    "airweave",
+    "alteryx",
+    "altimate-ai",
+    "amazon-entity-resolution",
+    "amazon-glue-databrew",
+    "apache-airflow",
+    "apache-flume",
+    "apache-hive",
+    "apache-nifi",
+    "artie",
+    "bem",
+    "boomi",
+    "calendar-api-ma",
+    "census",
+    "cherre",
+    "cloudera",
+    "cloudquery",
+    "confluent",
+    "databricks",
+    "datarails",
+    "dbt",
+    "debezium",
+    "decodable",
+    "end-close",
+    "estuary",
+    "fauna",
+    "feldera",
+    "fivetran",
+    "flatfile",
+    "flume-health",
+    "google-cloud-data-fusion",
+    "google-cloud-dataflow",
+    "google-cloud-datastream",
+    "hightouch",
+    "hotglue",
+    "import-io",
+    "improvado",
+    "incentivio",
+    "informatica",
+    "infoworks",
+    "keboola",
+    "lakekeeper",
+    "lightup",
+    "mage-ai",
+    "matillion",
+    "metaplane",
+    "microsoft-azure-data-factory",
+    "microsoft-azure-databricks",
+    "microsoft-azure-synapse-analytics",
+    "minubo",
+    "netter",
+    "nexla",
+    "oneschema",
+    "openlattice",
+    "oracle-goldengate",
+    "peaka",
+    "pigment",
+    "pingcap",
+    "polytomic",
+    "popsink",
+    "power-query",
+    "precog",
+    "prevedere",
+    "prophecyio",
+    "qlik-sense",
+    "qliksense",
+    "quantemplate",
+    "relex",
+    "rivery",
+    "rudderstack",
+    "segment",
+    "sequin-io",
+    "skyvia",
+    "snaplogic",
+    "snowflake",
+    "snowplow",
+    "soda-co",
+    "spring-batch",
+    "spring-batch-5-1",
+    "spring-batch-51",
+    "striim",
+    "structify",
+    "talend",
+    "taxi",
+    "tetrascience",
+    "tower",
+    "unstructured",
+    "vineyard",
+    "weld",
+    "xceptor",
+    "yunqi"
+   ],
+   "kebab-case": [
+    "airbyte",
+    "airweave",
+    "altimate-ai",
+    "apache-airflow",
+    "apache-nifi",
+    "artie",
+    "astronomer",
+    "bem",
+    "calendar-api-ma",
+    "cloudera",
+    "cloudquery",
+    "confluent",
+    "databricks",
+    "datarails",
+    "debezium",
+    "fivetran",
+    "flatfile",
+    "flume-health",
+    "hightouch",
+    "improvado",
+    "incentivio",
+    "infoworks",
+    "keboola",
+    "lakekeeper",
+    "matillion",
+    "metaplane",
+    "microsoft-azure-databricks",
+    "netter",
+    "nexla",
+    "oneschema",
+    "openlattice",
+    "peaka",
+    "pingcap",
+    "polytomic",
+    "popsink",
+    "precog",
+    "qliksense",
+    "segment",
+    "sequin-io",
+    "snaplogic",
+    "snowflake",
+    "snowplow",
+    "soda-co",
+    "structify",
+    "talend",
+    "tetrascience",
+    "tower",
+    "unstructured"
+   ],
+   "other": [
+    "airbyte",
+    "amazon-data-pipeline",
+    "amazon-entity-resolution",
+    "amazon-glue",
+    "amazon-glue-databrew",
+    "amazon-redshift",
+    "apache-airflow",
+    "aws-glue",
+    "confluent",
+    "databricks",
+    "datarails",
+    "dbt",
+    "fauna",
+    "flume-health",
+    "google-cloud-data-fusion",
+    "google-cloud-dataflow",
+    "incentivio",
+    "infoworks",
+    "keboola",
+    "microsoft-azure-data-factory",
+    "microsoft-azure-databricks",
+    "microsoft-azure-synapse-analytics",
+    "netter",
+    "nexla",
+    "openlattice",
+    "oracle-goldengate",
+    "pingcap",
+    "qliksense",
+    "relex",
+    "snowflake",
+    "talend"
+   ],
+   "snake_case": [
+    "ai-squared",
+    "airflow",
+    "altimate-ai",
+    "apache-airflow",
+    "census",
+    "dagster",
+    "end-close",
+    "estuary",
+    "feldera",
+    "hightouch",
+    "improvado",
+    "infoworks",
+    "lakekeeper",
+    "mage-ai",
+    "netter",
+    "nexla",
+    "peaka",
+    "pingcap",
+    "polytomic",
+    "popsink",
+    "relex",
+    "rivery",
+    "segment",
+    "sequin-io",
+    "snowflake",
+    "structify",
+    "weld"
+   ],
+   "camelCase": [
+    "airflow",
+    "alteryx",
+    "amazon-glue-databrew",
+    "apache-airflow",
+    "cloudera",
+    "confluent",
+    "flume-health",
+    "google-cloud-dataflow",
+    "google-cloud-datastream",
+    "hotglue",
+    "incentivio",
+    "informatica",
+    "infoworks",
+    "keboola",
+    "microsoft-azure-data-factory",
+    "microsoft-azure-synapse-analytics",
+    "openlattice",
+    "oracle-goldengate",
+    "peaka",
+    "pigment",
+    "pingcap",
+    "power-query",
+    "soda-co",
+    "striim",
+    "tetrascience",
+    "yunqi"
+   ],
+   "PascalCase": [
+    "amazon-redshift",
+    "boomi",
+    "confluent",
+    "microsoft-azure-synapse-analytics",
+    "talend"
+   ]
+  },
+  "path_param": {
+   "lower": [
+    "ai-squared",
+    "airflow",
+    "altimate-ai",
+    "amazon-glue-databrew",
+    "apache-airflow",
+    "apache-nifi",
+    "artie",
+    "bem",
+    "boomi",
+    "calendar-api-ma",
+    "census",
+    "cloudquery",
+    "confluent",
+    "debezium",
+    "end-close",
+    "estuary",
+    "feldera",
+    "flatfile",
+    "flume-health",
+    "google-cloud-data-fusion",
+    "google-cloud-dataflow",
+    "google-cloud-datastream",
+    "hotglue",
+    "improvado",
+    "incentivio",
+    "infoworks",
+    "keboola",
+    "lakekeeper",
+    "lightup",
+    "mage-ai",
+    "matillion",
+    "metaplane",
+    "netter",
+    "nexla",
+    "oneschema",
+    "openlattice",
+    "oracle-goldengate",
+    "peaka",
+    "pingcap",
+    "polytomic",
+    "popsink",
+    "precog",
+    "prevedere",
+    "qliksense",
+    "relex",
+    "snaplogic",
+    "snowflake",
+    "striim",
+    "structify",
+    "talend",
+    "tetrascience",
+    "tower",
+    "vineyard",
+    "weld"
+   ],
+   "camelCase": [
+    "3shake",
+    "alteryx",
+    "amazon-entity-resolution",
+    "amazon-glue-databrew",
+    "apache-hive",
+    "apache-nifi",
+    "artie",
+    "bem",
+    "boomi",
+    "confluent",
+    "dbt",
+    "fivetran",
+    "flatfile",
+    "flume-health",
+    "google-cloud-data-fusion",
+    "google-cloud-dataflow",
+    "google-cloud-datastream",
+    "hightouch",
+    "import-io",
+    "incentivio",
+    "informatica",
+    "keboola",
+    "matillion",
+    "metaplane",
+    "microsoft-azure-data-factory",
+    "microsoft-azure-synapse-analytics",
+    "minubo",
+    "openlattice",
+    "oracle-goldengate",
+    "peaka",
+    "pigment",
+    "pingcap",
+    "power-query",
+    "prevedere",
+    "prophecyio",
+    "qlik-sense",
+    "qliksense",
+    "quantemplate",
+    "segment",
+    "skyvia",
+    "snowflake",
+    "snowplow",
+    "soda-co",
+    "spring-batch",
+    "spring-batch-5-1",
+    "spring-batch-51",
+    "striim",
+    "talend",
+    "tetrascience",
+    "tower",
+    "vineyard",
+    "weld",
+    "xceptor"
+   ],
+   "snake_case": [
+    "ai-squared",
+    "airflow",
+    "airweave",
+    "altimate-ai",
+    "apache-airflow",
+    "bem",
+    "cloudquery",
+    "confluent",
+    "decodable",
+    "end-close",
+    "feldera",
+    "flume-health",
+    "hotglue",
+    "improvado",
+    "infoworks",
+    "lakekeeper",
+    "lightup",
+    "mage-ai",
+    "netter",
+    "nexla",
+    "oneschema",
+    "pingcap",
+    "polytomic",
+    "popsink",
+    "relex",
+    "rivery",
+    "sequin-io",
+    "snowflake",
+    "structify",
+    "taxi",
+    "tower",
+    "unstructured"
+   ],
+   "kebab-case": [
+    "apache-nifi",
+    "lakekeeper",
+    "oneschema",
+    "pingcap",
+    "precog",
+    "qliksense"
+   ],
+   "PascalCase": [
+    "amazon-glue-databrew",
+    "oracle-goldengate",
+    "prevedere"
+   ],
+   "other": [
+    "pingcap"
+   ]
+  },
+  "property": {
+   "lower": [
+    "3shake",
+    "ai-squared",
+    "airflow",
+    "airweave",
+    "alteryx",
+    "altimate-ai",
+    "amazon-entity-resolution",
+    "apache-airflow",
+    "apache-hive",
+    "apache-nifi",
+    "artie",
+    "bem",
+    "boomi",
+    "census",
+    "cloudquery",
+    "confluent",
+    "debezium",
+    "decodable",
+    "end-close",
+    "estuary",
+    "feldera",
+    "fivetran",
+    "flatfile",
+    "flume-health",
+    "google-cloud-dataflow",
+    "hightouch",
+    "hotglue",
+    "improvado",
+    "informatica",
+    "infoworks",
+    "keboola",
+    "lightup",
+    "mage-ai",
+    "metaplane",
+    "microsoft-azure-data-factory",
+    "microsoft-azure-synapse-analytics",
+    "netter",
+    "nexla",
+    "oneschema",
+    "oracle-goldengate",
+    "peaka",
+    "pingcap",
+    "polytomic",
+    "popsink",
+    "precog",
+    "prevedere",
+    "prophecyio",
+    "qliksense",
+    "quantemplate",
+    "relex",
+    "rivery",
+    "segment",
+    "sequin-io",
+    "skyvia",
+    "spring-batch",
+    "spring-batch-5-1",
+    "spring-batch-51",
+    "structify",
+    "talend",
+    "tetrascience",
+    "tower",
+    "unstructured",
+    "xceptor"
+   ],
+   "snake_case": [
+    "3shake",
+    "ai-squared",
+    "airflow",
+    "airweave",
+    "altimate-ai",
+    "apache-airflow",
+    "census",
+    "cloudquery",
+    "confluent",
+    "decodable",
+    "end-close",
+    "estuary",
+    "feldera",
+    "fivetran",
+    "hotglue",
+    "improvado",
+    "infoworks",
+    "mage-ai",
+    "netter",
+    "nexla",
+    "oneschema",
+    "pingcap",
+    "polytomic",
+    "popsink",
+    "relex",
+    "rivery",
+    "segment",
+    "structify",
+    "tower",
+    "unstructured",
+    "xceptor"
+   ],
+   "camelCase": [
+    "alteryx",
+    "amazon-entity-resolution",
+    "apache-hive",
+    "apache-nifi",
+    "artie",
+    "bem",
+    "boomi",
+    "flatfile",
+    "flume-health",
+    "google-cloud-dataflow",
+    "hightouch",
+    "informatica",
+    "keboola",
+    "lightup",
+    "metaplane",
+    "oracle-goldengate",
+    "peaka",
+    "precog",
+    "prevedere",
+    "prophecyio",
+    "qliksense",
+    "quantemplate",
+    "segment",
+    "skyvia",
+    "spring-batch",
+    "spring-batch-5-1",
+    "spring-batch-51",
+    "talend",
+    "tetrascience"
+   ],
+   "PascalCase": [
+    "amazon-glue-databrew",
+    "keboola"
+   ],
+   "other": [
+    "informatica",
+    "tower"
+   ]
+  },
+  "query_param": {
+   "lower": [
+    "3shake",
+    "ai-squared",
+    "airflow",
+    "airweave",
+    "alteryx",
+    "altimate-ai",
+    "amazon-glue-databrew",
+    "apache-airflow",
+    "apache-nifi",
+    "artie",
+    "bem",
+    "calendar-api-ma",
+    "census",
+    "cloudquery",
+    "confluent",
+    "databricks",
+    "datarails",
+    "debezium",
+    "end-close",
+    "estuary",
+    "fauna",
+    "feldera",
+    "fivetran",
+    "flatfile",
+    "flume-health",
+    "google-cloud-dataflow",
+    "google-cloud-datastream",
+    "hightouch",
+    "hotglue",
+    "improvado",
+    "incentivio",
+    "informatica",
+    "infoworks",
+    "keboola",
+    "lakekeeper",
+    "lightup",
+    "matillion",
+    "microsoft-azure-databricks",
+    "microsoft-azure-synapse-analytics",
+    "netter",
+    "nexla",
+    "oneschema",
+    "openlattice",
+    "oracle-goldengate",
+    "peaka",
+    "pingcap",
+    "polytomic",
+    "popsink",
+    "power-query",
+    "precog",
+    "prevedere",
+    "qlik-sense",
+    "qliksense",
+    "quantemplate",
+    "relex",
+    "rivery",
+    "segment",
+    "skyvia",
+    "snaplogic",
+    "snowflake",
+    "snowplow",
+    "soda-co",
+    "spring-batch",
+    "spring-batch-5-1",
+    "spring-batch-51",
+    "striim",
+    "structify",
+    "talend",
+    "taxi",
+    "tetrascience",
+    "tower",
+    "unstructured",
+    "vineyard",
+    "weld",
+    "xceptor"
+   ],
+   "camelCase": [
+    "alteryx",
+    "altimate-ai",
+    "amazon-entity-resolution",
+    "amazon-glue-databrew",
+    "apache-nifi",
+    "artie",
+    "astronomer",
+    "bem",
+    "boomi",
+    "confluent",
+    "debezium",
+    "flatfile",
+    "flume-health",
+    "google-cloud-data-fusion",
+    "google-cloud-dataflow",
+    "google-cloud-datastream",
+    "hightouch",
+    "hotglue",
+    "incentivio",
+    "informatica",
+    "keboola",
+    "lakekeeper",
+    "lightup",
+    "matillion",
+    "metaplane",
+    "microsoft-azure-data-factory",
+    "microsoft-azure-synapse-analytics",
+    "minubo",
+    "openlattice",
+    "oracle-goldengate",
+    "peaka",
+    "pigment",
+    "pingcap",
+    "power-query",
+    "prevedere",
+    "qlik-sense",
+    "qliksense",
+    "segment",
+    "skyvia",
+    "snowflake",
+    "soda-co",
+    "striim",
+    "talend",
+    "tetrascience",
+    "weld"
+   ],
+   "snake_case": [
+    "3shake",
+    "ai-squared",
+    "airflow",
+    "airweave",
+    "altimate-ai",
+    "apache-airflow",
+    "calendar-api-ma",
+    "census",
+    "cloudquery",
+    "confluent",
+    "databricks",
+    "datarails",
+    "end-close",
+    "estuary",
+    "feldera",
+    "flume-health",
+    "hotglue",
+    "improvado",
+    "infoworks",
+    "lakekeeper",
+    "lightup",
+    "mage-ai",
+    "microsoft-azure-databricks",
+    "netter",
+    "nexla",
+    "oneschema",
+    "pingcap",
+    "polytomic",
+    "popsink",
+    "qliksense",
+    "relex",
+    "rivery",
+    "sequin-io",
+    "snowflake",
+    "structify",
+    "tetrascience",
+    "tower",
+    "unstructured",
+    "weld",
+    "xceptor"
+   ],
+   "other": [
+    "ai-squared",
+    "confluent",
+    "google-cloud-dataflow",
+    "keboola",
+    "mage-ai",
+    "microsoft-azure-synapse-analytics",
+    "qliksense",
+    "segment",
+    "tetrascience"
+   ],
+   "PascalCase": [
+    "amazon-glue",
+    "amazon-glue-databrew",
+    "amazon-redshift",
+    "aws-glue",
+    "prevedere",
+    "qliksense",
+    "yunqi"
+   ],
+   "kebab-case": [
+    "incentivio",
+    "infoworks",
+    "lakekeeper",
+    "microsoft-azure-synapse-analytics",
+    "precog"
+   ]
+  },
+  "pagination_param": {
+   "limit": [
+    "3shake",
+    "airflow",
+    "airweave",
+    "alteryx",
+    "altimate-ai",
+    "apache-airflow",
+    "apache-nifi",
+    "bem",
+    "cloudquery",
+    "confluent",
+    "databricks",
+    "end-close",
+    "feldera",
+    "fivetran",
+    "flume-health",
+    "hightouch",
+    "infoworks",
+    "keboola",
+    "lightup",
+    "mage-ai",
+    "matillion",
+    "microsoft-azure-databricks",
+    "netter",
+    "nexla",
+    "oneschema",
+    "oracle-goldengate",
+    "peaka",
+    "pingcap",
+    "polytomic",
+    "qlik-sense",
+    "qliksense",
+    "segment",
+    "snaplogic",
+    "structify",
+    "talend",
+    "taxi",
+    "tetrascience",
+    "unstructured",
+    "weld"
+   ],
+   "page": [
+    "3shake",
+    "ai-squared",
+    "altimate-ai",
+    "bem",
+    "census",
+    "cloudquery",
+    "end-close",
+    "hotglue",
+    "improvado",
+    "incentivio",
+    "netter",
+    "nexla",
+    "oracle-goldengate",
+    "pingcap",
+    "polytomic",
+    "popsink",
+    "prevedere",
+    "qliksense",
+    "relex",
+    "rivery",
+    "snowflake",
+    "soda-co",
+    "spring-batch",
+    "spring-batch-5-1",
+    "spring-batch-51",
+    "tetrascience",
+    "tower",
+    "unstructured",
+    "xceptor"
+   ],
+   "offset": [
+    "airflow",
+    "alteryx",
+    "altimate-ai",
+    "apache-airflow",
+    "apache-nifi",
+    "confluent",
+    "databricks",
+    "end-close",
+    "hightouch",
+    "infoworks",
+    "keboola",
+    "lightup",
+    "mage-ai",
+    "matillion",
+    "microsoft-azure-databricks",
+    "netter",
+    "nexla",
+    "oneschema",
+    "peaka",
+    "prevedere",
+    "qliksense",
+    "structify",
+    "talend"
+   ],
+   "page_size": [
+    "ai-squared",
+    "altimate-ai",
+    "boomi",
+    "confluent",
+    "flatfile",
+    "flume-health",
+    "google-cloud-data-fusion",
+    "google-cloud-dataflow",
+    "google-cloud-datastream",
+    "improvado",
+    "keboola",
+    "lakekeeper",
+    "netter",
+    "pingcap",
+    "prevedere",
+    "tetrascience",
+    "tower",
+    "unstructured",
+    "xceptor"
+   ],
+   "cursor": [
+    "airflow",
+    "apache-airflow",
+    "bem",
+    "cloudquery",
+    "end-close",
+    "fivetran",
+    "hightouch",
+    "qliksense",
+    "tetrascience",
+    "unstructured"
+   ],
+   "size": [
+    "altimate-ai",
+    "microsoft-azure-synapse-analytics",
+    "nexla",
+    "popsink",
+    "soda-co",
+    "spring-batch",
+    "spring-batch-5-1",
+    "spring-batch-51",
+    "tetrascience"
+   ],
+   "page_token": [
+    "boomi",
+    "confluent",
+    "flume-health",
+    "google-cloud-data-fusion",
+    "google-cloud-dataflow",
+    "google-cloud-datastream",
+    "lakekeeper",
+    "pingcap",
+    "polytomic"
+   ],
+   "count": [
+    "apache-nifi",
+    "hotglue",
+    "incentivio",
+    "infoworks",
+    "nexla",
+    "oneschema",
+    "talend",
+    "tetrascience"
+   ],
+   "next": [
+    "airflow",
+    "apache-airflow",
+    "qlik-sense",
+    "qliksense",
+    "segment",
+    "tetrascience"
+   ],
+   "skip": [
+    "airweave",
+    "microsoft-azure-synapse-analytics",
+    "pingcap",
+    "qliksense",
+    "skyvia",
+    "tetrascience"
+   ],
+   "after": [
+    "airflow",
+    "apache-airflow",
+    "apache-nifi",
+    "hightouch",
+    "polytomic"
+   ],
+   "per_page": [
+    "census",
+    "cloudquery",
+    "end-close",
+    "nexla",
+    "relex"
+   ],
+   "before": [
+    "airflow",
+    "apache-airflow",
+    "hightouch",
+    "netter"
+   ],
+   "max_results": [
+    "amazon-entity-resolution",
+    "amazon-glue",
+    "amazon-glue-databrew",
+    "aws-glue"
+   ],
+   "starting_after": [
+    "bem",
+    "polytomic",
+    "qliksense",
+    "weld"
+   ],
+   "start": [
+    "calendar-api-ma",
+    "cloudquery",
+    "structify"
+   ]
+  }
+ }
+}

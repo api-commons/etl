@@ -1,0 +1,59 @@
+provider: altimate-ai
+apis_io: https://apis.io/providers/altimate-ai/
+context: etl
+generated: '2026-11-11'
+concepts:
+  destination:
+    path_segment:
+    - targets
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/altimate-ai-openapi-original.json#GET /sso-group-mappings/targets
+  data_pipeline:
+    path_segment:
+    - connections
+    properties:
+      id: id
+      name: name
+      type: type
+      created_at: created_at
+      description: description
+      updated_at: updated_at
+      config: config
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/altimate-ai-openapi-original.json#DELETE /api/v1/databricks/connections/{connection_id}
+    - openapi/_original/altimate-ai-openapi-original.json#DELETE /api/v1/dbt/cloud/connections/{connection_id}
+    - openapi/_original/altimate-ai-openapi-original.json#DELETE /connections/{connection_id}
+    - openapi/_original/altimate-ai-openapi-original.json#GET /api/v1/databricks/connections
+    - openapi/_original/altimate-ai-openapi-original.json#GET /api/v1/databricks/connections/{connection_id}
+  sync_job:
+    path_segment:
+    - runs
+    - jobs
+    - sync
+    - run
+    - executions
+    properties:
+      status:
+      - state
+      - status
+      id:
+      - job_id
+      - id
+      - uuid
+      created_at: created_at
+      finished_at: end_time
+      started_at: start_time
+      name: name
+      error: error
+      type: type
+      run_id: run_id
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/altimate-ai-openapi-original.json#DELETE /api/ade-bench/runs/{run_id}
+    - openapi/_original/altimate-ai-openapi-original.json#GET /api/ade-bench/runs
+    - openapi/_original/altimate-ai-openapi-original.json#GET /api/ade-bench/runs/{run_id}
+    - openapi/_original/altimate-ai-openapi-original.json#GET /api/v1/alerts/rules/{rule_id}/runs
+    - openapi/_original/altimate-ai-openapi-original.json#GET /api/v1/databricks/jobs

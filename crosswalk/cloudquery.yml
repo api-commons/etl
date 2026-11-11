@@ -1,0 +1,46 @@
+provider: cloudquery
+apis_io: https://apis.io/providers/cloudquery/
+context: etl
+generated: '2026-11-11'
+concepts:
+  destination:
+    path_segment:
+    - destination
+    - destinations
+    properties:
+      name: name
+      id: id
+      destination_type: type
+      created_at: created_at
+      updated_at: updated_at
+    core_coverage: 0.8
+    evidence:
+    - openapi/_original/cloudquery-openapi.json#DELETE /notifications/destination/{notification_destination_id}
+    - openapi/_original/cloudquery-openapi.json#GET /notifications/destination/{notification_destination_id}
+    - openapi/_original/cloudquery-openapi.json#GET /notifications/destinations
+    - openapi/_original/cloudquery-openapi.json#PATCH /notifications/destination/{notification_destination_id}
+    - openapi/_original/cloudquery-openapi.json#POST /notifications/destinations
+  sync_job:
+    path_segment:
+    - runs
+    - syncs
+    properties:
+      status: status
+      id: id
+      created_at: created_at
+      finished_at:
+      - finished_at
+      - completed_at
+      started_at: started_at
+      name:
+      - name
+      - display_name
+      error: error
+      updated_at: updated_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/cloudquery-openapi.json#DELETE /syncs/{sync_name}
+    - openapi/_original/cloudquery-openapi.json#DELETE /table-exports/runs/{run_id}
+    - openapi/_original/cloudquery-openapi.json#GET /sync-destinations/{sync_destination_name}/syncs
+    - openapi/_original/cloudquery-openapi.json#GET /sync-sources/{sync_source_name}/syncs
+    - openapi/_original/cloudquery-openapi.json#GET /sync-transformers/{sync_transformer_name}/syncs

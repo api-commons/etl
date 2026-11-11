@@ -1,0 +1,14 @@
+provider: estuary
+apis_io: https://apis.io/providers/estuary/
+context: etl
+generated: '2026-11-11'
+concepts:
+  data_pipeline:
+    path_segment:
+    - connectors
+    properties:
+      id: id
+      name: title
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/estuary-openapi.yml#GET /connectors

@@ -1,0 +1,13 @@
+provider: weld
+apis_io: https://apis.io/providers/weld/
+context: etl
+generated: '2026-11-11'
+concepts:
+  data_pipeline:
+    path_segment:
+    - connections
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/weld-connect-openapi.json#DELETE /connections/{id}
+    - openapi/_original/weld-connect-openapi.json#GET /connections

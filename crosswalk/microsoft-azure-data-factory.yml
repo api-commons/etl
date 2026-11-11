@@ -1,0 +1,15 @@
+provider: microsoft-azure-data-factory
+apis_io: https://apis.io/providers/microsoft-azure-data-factory/
+context: etl
+generated: '2026-11-11'
+concepts:
+  data_pipeline:
+    path_segment:
+    - pipelines
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/microsoft-azure-data-factory-datafactory-2018-06-01-swagger.json#DELETE /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataFactory/factories/{factoryName}/pipelines/{pipelineName}
+    - openapi/_original/microsoft-azure-data-factory-datafactory-2018-06-01-swagger.json#GET /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataFactory/factories/{factoryName}/pipelines
+    - openapi/_original/microsoft-azure-data-factory-datafactory-2018-06-01-swagger.json#GET /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataFactory/factories/{factoryName}/pipelines/{pipelineName}
+    - openapi/_original/microsoft-azure-data-factory-datafactory-2018-06-01-swagger.json#PUT /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DataFactory/factories/{factoryName}/pipelines/{pipelineName}

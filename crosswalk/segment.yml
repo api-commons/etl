@@ -1,0 +1,47 @@
+provider: segment
+apis_io: https://apis.io/providers/segment/
+context: etl
+generated: '2026-11-11'
+concepts:
+  source:
+    path_segment:
+    - sources
+    properties:
+      name: name
+      id: id
+      configuration: settings
+      created_at: create_time
+      status: status
+      description: description
+      metadata: metadata
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/segment-config-api-openapi.yml#DELETE /workspaces/{workspaceName}/sources/{sourceName}
+    - openapi/_original/segment-config-api-openapi.yml#GET /workspaces/{workspaceName}/sources
+    - openapi/_original/segment-config-api-openapi.yml#GET /workspaces/{workspaceName}/sources/{sourceName}
+    - openapi/_original/segment-config-api-openapi.yml#POST /workspaces/{workspaceName}/sources
+    - openapi/_original/segment-public-api-openapi.yml#DELETE /sources/{sourceId}
+  destination:
+    path_segment:
+    - destinations
+    properties:
+      name:
+      - name
+      - display_name
+      id:
+      - id
+      - sourceId
+      destination_type: type
+      configuration:
+      - config
+      - settings
+      created_at: create_time
+      status: status
+      updated_at: update_time
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/segment-config-api-openapi.yml#DELETE /workspaces/{workspaceName}/sources/{sourceName}/destinations/{destinationName}
+    - openapi/_original/segment-config-api-openapi.yml#GET /workspaces/{workspaceName}/sources/{sourceName}/destinations
+    - openapi/_original/segment-config-api-openapi.yml#GET /workspaces/{workspaceName}/sources/{sourceName}/destinations/{destinationName}
+    - openapi/_original/segment-config-api-openapi.yml#PATCH /workspaces/{workspaceName}/sources/{sourceName}/destinations/{destinationName}
+    - openapi/_original/segment-config-api-openapi.yml#POST /workspaces/{workspaceName}/sources/{sourceName}/destinations

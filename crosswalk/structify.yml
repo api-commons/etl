@@ -1,0 +1,37 @@
+provider: structify
+apis_io: https://apis.io/providers/structify/
+context: etl
+generated: '2026-11-11'
+concepts:
+  data_pipeline:
+    path_segment:
+    - connectors
+    properties:
+      id: id
+      name: name
+      created_at: created_at
+      description: description
+      updated_at: updated_at
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/structify-openapi-original.json#DELETE /connectors/{connector_id}
+    - openapi/_original/structify-openapi-original.json#GET /connectors
+    - openapi/_original/structify-openapi-original.json#GET /connectors/{connector_id}
+    - openapi/_original/structify-openapi-original.json#PATCH /connectors/{connector_id}
+    - openapi/_original/structify-openapi-original.json#POST /connectors
+  sync_job:
+    path_segment:
+    - run
+    - runs
+    properties:
+      status: status
+      id:
+      - connector_id
+      - id
+      created_at: created_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/structify-openapi-original.json#GET /connectors/{connector_id}/explore/runs
+    - openapi/_original/structify-openapi-original.json#POST /dataset/evaluate/run
+    - openapi/_original/structify-openapi-original.json#POST /workflow-schedule/{schedule_id}/run
+    - openapi/_original/structify-openapi-original.json#POST /workflow/run

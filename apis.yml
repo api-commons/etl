@@ -1,0 +1,54 @@
+aid: common-etl
+name: Data Integration and ETL
+type: Common
+description: 'The common Data Integration and ETL vocabulary, distilled from the harvested OpenAPI of 101 providers
+  in APIs.io: shared operations, JSON Schema per concept with measured adoption, and a crosswalk from the common
+  names to each provider''s own.'
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+- Application Programming Interface
+- API
+- ETL
+- ELT
+- Data Integration
+- Data Pipelines
+- Common Schema
+created: '2026-11-11'
+modified: '2026-11-11'
+url: https://raw.githubusercontent.com/api-commons/etl/main/apis.yml
+specificationVersion: '0.20'
+apis:
+- aid: common-etl:etl
+  name: Common Data Integration and ETL Interface
+  description: The Data Integration and ETL interface the market already shares, measured.
+  humanURL: https://github.com/api-commons/etl
+  tags:
+  - ETL
+  - ELT
+  properties:
+  - type: OpenAPI
+    url: https://raw.githubusercontent.com/api-commons/etl/main/openapi.yml
+  - type: Profile
+    url: https://raw.githubusercontent.com/api-commons/etl/main/profile.yml
+  - type: Adopters
+    url: https://raw.githubusercontent.com/api-commons/etl/main/adopters.yml
+  - type: Rules
+    url: https://raw.githubusercontent.com/api-commons/schema-commons/main/ruleset/schema-commons-naming.yaml
+  - type: JSONSchema
+    name: source
+    url: https://raw.githubusercontent.com/api-commons/etl/main/schema/source.json
+  - type: JSONSchema
+    name: destination
+    url: https://raw.githubusercontent.com/api-commons/etl/main/schema/destination.json
+  - type: JSONSchema
+    name: data_pipeline
+    url: https://raw.githubusercontent.com/api-commons/etl/main/schema/data_pipeline.json
+  - type: JSONSchema
+    name: sync_job
+    url: https://raw.githubusercontent.com/api-commons/etl/main/schema/sync_job.json
+common:
+- type: License
+  url: https://raw.githubusercontent.com/api-commons/etl/main/LICENSE
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

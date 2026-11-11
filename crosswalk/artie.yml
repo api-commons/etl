@@ -1,0 +1,23 @@
+provider: artie
+apis_io: https://apis.io/providers/artie/
+context: etl
+generated: '2026-11-11'
+concepts:
+  data_pipeline:
+    path_segment:
+    - connectors
+    - pipelines
+    properties:
+      id: uuid
+      name: name
+      type: type
+      created_at: createdAt
+      updated_at: updatedAt
+      status: status
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/artie-openapi.yml#DELETE /connectors/{uuid}
+    - openapi/_original/artie-openapi.yml#DELETE /pipelines/{uuid}
+    - openapi/_original/artie-openapi.yml#GET /connectors
+    - openapi/_original/artie-openapi.yml#GET /connectors/{uuid}
+    - openapi/_original/artie-openapi.yml#GET /pipelines

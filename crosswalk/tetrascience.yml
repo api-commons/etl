@@ -1,0 +1,26 @@
+provider: tetrascience
+apis_io: https://apis.io/providers/tetrascience/
+context: etl
+generated: '2026-11-11'
+concepts:
+  data_pipeline:
+    path_segment:
+    - connectors
+    - connector
+    - pipeline
+    properties:
+      id: id
+      name: name
+      type: type
+      created_at: createdAt
+      description: description
+      updated_at: updatedAt
+      status: status
+      config: config
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/tetrascience-openapi.json#GET /v1/artifacts/connectors
+    - openapi/_original/tetrascience-openapi.json#GET /v1/artifacts/connectors/{namespace}
+    - openapi/_original/tetrascience-openapi.json#GET /v1/data-acquisition/connectors
+    - openapi/_original/tetrascience-openapi.json#GET /v1/data-acquisition/connectors/{id}
+    - openapi/_original/tetrascience-openapi.json#GET /v1/pipeline/{pipelineId}

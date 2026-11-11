@@ -1,0 +1,28 @@
+provider: nexla
+apis_io: https://apis.io/providers/nexla/
+context: etl
+generated: '2026-11-11'
+concepts:
+  data_pipeline:
+    path_segment:
+    - flows
+    properties:
+      id: id
+      name: name
+      description: description
+      status: status
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/nexla-rest-api-openapi.yml#DELETE /flows/{flow_id}
+    - openapi/_original/nexla-rest-api-openapi.yml#DELETE /projects/{project_id}/flows
+    - openapi/_original/nexla-rest-api-openapi.yml#GET /flows
+    - openapi/_original/nexla-rest-api-openapi.yml#GET /flows/{flow_id}
+    - openapi/_original/nexla-rest-api-openapi.yml#GET /projects/{project_id}/flows
+  sync_job:
+    path_segment:
+    - sync
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/nexla-genai-mcpaas-openapi.json#POST /v1/toolsets/{tool_set_id}/gateway/mcp-servers/{server_id}/sync
+    - openapi/_original/nexla-genai-mcpaas.json#POST /v1/toolsets/{tool_set_id}/gateway/mcp-servers/{server_id}/sync

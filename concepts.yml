@@ -1,0 +1,58 @@
+context: etl
+name: Data Integration and ETL
+intro: >-
+  The common data-integration vocabulary -- sources and destinations, the connections or pipelines
+  between them, and the sync jobs that move data -- distilled from the APIs that already exist.
+tags: [ETL, ELT, Data Integration, Data Pipelines, Reverse ETL, Data Engineering, Change Data Capture]
+
+envelope: [_links, _pagination, _results, data, success, errors, count, total, page, meta, links, result, results,
+           value, next, previous, has_more, message, page_info, cursor, total_count, per_page, total_pages, object]
+
+common_fields:
+  id: [uuid, guid, external_id, source_id, destination_id, connection_id, connector_id, pipeline_id, job_id, sync_id]
+  created_at: [created, created_date, create_time, creation_time, created_on]
+  updated_at: [updated, modified_at, update_time, last_modified]
+  status: [state]
+  name: [title, display_name]
+
+concepts:
+  source:
+    segments: [sources, source]
+    aliases:
+      source_type: [type, connector_type, source_definition_id, service, kind]
+      configuration: [config, settings]
+  destination:
+    segments: [destinations, destination, targets, sinks, warehouses@etl]
+    aliases:
+      destination_type: [type, connector_type, destination_definition_id, service, kind]
+      configuration: [config, settings]
+  data_pipeline:
+    path: /data-pipelines
+    segments: [connections, connection, pipelines, pipeline, connectors, connector, flows, syncs@etl]
+    aliases:
+      schedule: [sync_frequency, schedule_type, frequency, cron]
+      source_id: [source]
+      destination_id: [destination]
+      paused: [is_paused, disabled, enabled]
+  sync_job:
+    path: /sync-jobs
+    requires_any: [data_pipeline, source, destination]
+    segments: [jobs, job, syncs, sync, runs, run, executions]
+    aliases:
+      started_at: [start_time, start_at, started]
+      finished_at: [end_time, completed_at, ended_at, finished]
+      rows_synced: [records_synced, rows, records, rows_processed]
+
+findings:
+  - >-
+    Destinations agree on name, id, destination_type, configuration and created_at: a typed connector
+    with an opaque configuration object. Sources agree only on name and id; source_type reaches 36%.
+  - >-
+    Pipelines -- called connections, connectors, flows or pipelines -- agree on id, name and type.
+    Sync jobs agree on status and id; started_at and finished_at reach 42%.
+decisions:
+  - >-
+    The pipeline is data_pipeline and its run is sync_job, because connection, job and run are used in
+    ci-cd, workflow-automation and identity.
+  - >-
+    configuration stays opaque: each connector type defines its own settings.

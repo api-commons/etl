@@ -1,0 +1,16 @@
+provider: peaka
+apis_io: https://apis.io/providers/peaka/
+context: etl
+generated: '2026-11-11'
+concepts:
+  data_pipeline:
+    path_segment:
+    - connections
+    properties:
+      id: id
+      name: name
+      type: type
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/peaka-api-openapi.json#GET /connections/{projectId}
+    - openapi/_original/peaka-api-openapi.json#POST /connections/{projectId}

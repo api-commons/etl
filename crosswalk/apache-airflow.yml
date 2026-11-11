@@ -1,0 +1,27 @@
+provider: apache-airflow
+apis_io: https://apis.io/providers/apache-airflow/
+context: etl
+generated: '2026-11-11'
+concepts:
+  data_pipeline:
+    path_segment:
+    - connections
+    properties:
+      id: connection_id
+      description: description
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/apache-airflow-openapi.yaml#DELETE /connections/{connection_id}
+    - openapi/_original/apache-airflow-openapi.yaml#GET /connections
+    - openapi/_original/apache-airflow-openapi.yaml#GET /connections/{connection_id}
+    - openapi/_original/apache-airflow-openapi.yaml#PATCH /connections/{connection_id}
+    - openapi/_original/apache-airflow-openapi.yaml#POST /connections
+  sync_job:
+    path_segment:
+    - jobs
+    properties:
+      status: state
+      id: id
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/apache-airflow-openapi.yml#GET /api/v2/jobs

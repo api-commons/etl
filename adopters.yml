@@ -1,0 +1,283 @@
+context: etl
+generated: '2026-11-11'
+adopters:
+- provider: ai-squared
+  apis_io: https://apis.io/providers/ai-squared/
+  crosswalk: crosswalk/ai-squared.yml
+  concepts:
+  - data_pipeline
+  - sync_job
+- provider: airflow
+  apis_io: https://apis.io/providers/airflow/
+  crosswalk: crosswalk/airflow.yml
+  concepts:
+  - data_pipeline
+  - sync_job
+- provider: airweave
+  apis_io: https://apis.io/providers/airweave/
+  crosswalk: crosswalk/airweave.yml
+  concepts:
+  - source
+  - sync_job
+- provider: altimate-ai
+  apis_io: https://apis.io/providers/altimate-ai/
+  crosswalk: crosswalk/altimate-ai.yml
+  concepts:
+  - data_pipeline
+  - destination
+  - sync_job
+- provider: apache-airflow
+  apis_io: https://apis.io/providers/apache-airflow/
+  crosswalk: crosswalk/apache-airflow.yml
+  concepts:
+  - data_pipeline
+  - sync_job
+- provider: apache-nifi
+  apis_io: https://apis.io/providers/apache-nifi/
+  crosswalk: crosswalk/apache-nifi.yml
+  concepts:
+  - data_pipeline
+- provider: artie
+  apis_io: https://apis.io/providers/artie/
+  crosswalk: crosswalk/artie.yml
+  concepts:
+  - data_pipeline
+- provider: bem
+  apis_io: https://apis.io/providers/bem/
+  crosswalk: crosswalk/bem.yml
+  concepts:
+  - data_pipeline
+- provider: boomi
+  apis_io: https://apis.io/providers/boomi/
+  crosswalk: crosswalk/boomi.yml
+  concepts:
+  - source
+- provider: census
+  apis_io: https://apis.io/providers/census/
+  crosswalk: crosswalk/census.yml
+  concepts:
+  - destination
+  - source
+  - sync_job
+- provider: cloudquery
+  apis_io: https://apis.io/providers/cloudquery/
+  crosswalk: crosswalk/cloudquery.yml
+  concepts:
+  - destination
+  - sync_job
+- provider: confluent
+  apis_io: https://apis.io/providers/confluent/
+  crosswalk: crosswalk/confluent.yml
+  concepts:
+  - data_pipeline
+- provider: debezium
+  apis_io: https://apis.io/providers/debezium/
+  crosswalk: crosswalk/debezium.yml
+  concepts:
+  - data_pipeline
+- provider: decodable
+  apis_io: https://apis.io/providers/decodable/
+  crosswalk: crosswalk/decodable.yml
+  concepts:
+  - data_pipeline
+- provider: estuary
+  apis_io: https://apis.io/providers/estuary/
+  crosswalk: crosswalk/estuary.yml
+  concepts:
+  - data_pipeline
+- provider: feldera
+  apis_io: https://apis.io/providers/feldera/
+  crosswalk: crosswalk/feldera.yml
+  concepts:
+  - data_pipeline
+  - sync_job
+- provider: fivetran
+  apis_io: https://apis.io/providers/fivetran/
+  crosswalk: crosswalk/fivetran.yml
+  concepts:
+  - data_pipeline
+  - destination
+  - sync_job
+- provider: flume-health
+  apis_io: https://apis.io/providers/flume-health/
+  crosswalk: crosswalk/flume-health.yml
+  concepts:
+  - data_pipeline
+  - sync_job
+- provider: hightouch
+  apis_io: https://apis.io/providers/hightouch/
+  crosswalk: crosswalk/hightouch.yml
+  concepts:
+  - data_pipeline
+  - destination
+  - source
+  - sync_job
+- provider: improvado
+  apis_io: https://apis.io/providers/improvado/
+  crosswalk: crosswalk/improvado.yml
+  concepts:
+  - data_pipeline
+  - destination
+  - sync_job
+- provider: informatica
+  apis_io: https://apis.io/providers/informatica/
+  crosswalk: crosswalk/informatica.yml
+  concepts:
+  - data_pipeline
+  - sync_job
+- provider: infoworks
+  apis_io: https://apis.io/providers/infoworks/
+  crosswalk: crosswalk/infoworks.yml
+  concepts:
+  - data_pipeline
+  - source
+  - sync_job
+- provider: keboola
+  apis_io: https://apis.io/providers/keboola/
+  crosswalk: crosswalk/keboola.yml
+  concepts:
+  - destination
+  - source
+  - sync_job
+- provider: lightup
+  apis_io: https://apis.io/providers/lightup/
+  crosswalk: crosswalk/lightup.yml
+  concepts:
+  - source
+- provider: mage-ai
+  apis_io: https://apis.io/providers/mage-ai/
+  crosswalk: crosswalk/mage-ai.yml
+  concepts:
+  - data_pipeline
+- provider: metaplane
+  apis_io: https://apis.io/providers/metaplane/
+  crosswalk: crosswalk/metaplane.yml
+  concepts:
+  - data_pipeline
+  - sync_job
+- provider: microsoft-azure-data-factory
+  apis_io: https://apis.io/providers/microsoft-azure-data-factory/
+  crosswalk: crosswalk/microsoft-azure-data-factory.yml
+  concepts:
+  - data_pipeline
+- provider: microsoft-azure-synapse-analytics
+  apis_io: https://apis.io/providers/microsoft-azure-synapse-analytics/
+  crosswalk: crosswalk/microsoft-azure-synapse-analytics.yml
+  concepts:
+  - data_pipeline
+- provider: netter
+  apis_io: https://apis.io/providers/netter/
+  crosswalk: crosswalk/netter.yml
+  concepts:
+  - data_pipeline
+  - sync_job
+- provider: nexla
+  apis_io: https://apis.io/providers/nexla/
+  crosswalk: crosswalk/nexla.yml
+  concepts:
+  - data_pipeline
+  - sync_job
+- provider: oracle-goldengate
+  apis_io: https://apis.io/providers/oracle-goldengate/
+  crosswalk: crosswalk/oracle-goldengate.yml
+  concepts:
+  - data_pipeline
+  - destination
+  - source
+  - sync_job
+- provider: peaka
+  apis_io: https://apis.io/providers/peaka/
+  crosswalk: crosswalk/peaka.yml
+  concepts:
+  - data_pipeline
+- provider: pingcap
+  apis_io: https://apis.io/providers/pingcap/
+  crosswalk: crosswalk/pingcap.yml
+  concepts:
+  - source
+  - sync_job
+- provider: polytomic
+  apis_io: https://apis.io/providers/polytomic/
+  crosswalk: crosswalk/polytomic.yml
+  concepts:
+  - data_pipeline
+  - source
+  - sync_job
+- provider: popsink
+  apis_io: https://apis.io/providers/popsink/
+  crosswalk: crosswalk/popsink.yml
+  concepts:
+  - data_pipeline
+- provider: precog
+  apis_io: https://apis.io/providers/precog/
+  crosswalk: crosswalk/precog.yml
+  concepts:
+  - data_pipeline
+  - destination
+  - source
+- provider: prophecyio
+  apis_io: https://apis.io/providers/prophecyio/
+  crosswalk: crosswalk/prophecyio.yml
+  concepts:
+  - data_pipeline
+  - sync_job
+- provider: qliksense
+  apis_io: https://apis.io/providers/qliksense/
+  crosswalk: crosswalk/qliksense.yml
+  concepts:
+  - data_pipeline
+  - source
+  - sync_job
+- provider: rivery
+  apis_io: https://apis.io/providers/rivery/
+  crosswalk: crosswalk/rivery.yml
+  concepts:
+  - data_pipeline
+  - source
+  - sync_job
+- provider: segment
+  apis_io: https://apis.io/providers/segment/
+  crosswalk: crosswalk/segment.yml
+  concepts:
+  - destination
+  - source
+- provider: sequin-io
+  apis_io: https://apis.io/providers/sequin-io/
+  crosswalk: crosswalk/sequin-io.yml
+  concepts:
+  - destination
+- provider: skyvia
+  apis_io: https://apis.io/providers/skyvia/
+  crosswalk: crosswalk/skyvia.yml
+  concepts:
+  - data_pipeline
+  - sync_job
+- provider: structify
+  apis_io: https://apis.io/providers/structify/
+  crosswalk: crosswalk/structify.yml
+  concepts:
+  - data_pipeline
+  - sync_job
+- provider: talend
+  apis_io: https://apis.io/providers/talend/
+  crosswalk: crosswalk/talend.yml
+  concepts:
+  - data_pipeline
+  - sync_job
+- provider: tetrascience
+  apis_io: https://apis.io/providers/tetrascience/
+  crosswalk: crosswalk/tetrascience.yml
+  concepts:
+  - data_pipeline
+- provider: unstructured
+  apis_io: https://apis.io/providers/unstructured/
+  crosswalk: crosswalk/unstructured.yml
+  concepts:
+  - destination
+  - source
+  - sync_job
+- provider: weld
+  apis_io: https://apis.io/providers/weld/
+  crosswalk: crosswalk/weld.yml
+  concepts:
+  - data_pipeline

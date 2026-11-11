@@ -1,0 +1,27 @@
+provider: airflow
+apis_io: https://apis.io/providers/airflow/
+context: etl
+generated: '2026-11-11'
+concepts:
+  data_pipeline:
+    path_segment:
+    - connections
+    properties:
+      id: connection_id
+      description: description
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/airflow-openapi.yml#DELETE /api/v2/connections/{connection_id}
+    - openapi/_original/airflow-openapi.yml#GET /api/v2/connections
+    - openapi/_original/airflow-openapi.yml#GET /api/v2/connections/{connection_id}
+    - openapi/_original/airflow-openapi.yml#PATCH /api/v2/connections
+    - openapi/_original/airflow-openapi.yml#PATCH /api/v2/connections/{connection_id}
+  sync_job:
+    path_segment:
+    - jobs
+    properties:
+      status: state
+      id: id
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/airflow-openapi.yml#GET /api/v2/jobs

@@ -1,0 +1,45 @@
+provider: improvado
+apis_io: https://apis.io/providers/improvado/
+context: etl
+generated: '2026-11-11'
+concepts:
+  destination:
+    path_segment:
+    - destinations
+    properties:
+      name:
+      - name
+      - title
+    core_coverage: 0.2
+    evidence:
+    - openapi/_original/improvado-openapi.yml#GET /api/v3/destinations
+  data_pipeline:
+    path_segment:
+    - connections
+    properties:
+      id: id
+      name: title
+      created_at: created_at
+      updated_at: updated_at
+      status: status
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/improvado-openapi.yml#DELETE /api/v3/connections/{connection_id}
+    - openapi/_original/improvado-openapi.yml#DELETE /api/v3/datasources/{datasource_name}/connections/{id}
+    - openapi/_original/improvado-openapi.yml#GET /api/v3/datasources/{datasource_name}/connections
+    - openapi/_original/improvado-openapi.yml#GET /api/v3/destinations/{destination_name}/connections
+    - openapi/_original/improvado-openapi.yml#GET /api/v3/destinations/{destination_name}/connections/{id}
+  sync_job:
+    path_segment:
+    - run
+    properties:
+      status: status
+      id:
+      - id
+      - connection_id
+      created_at: created_at
+      name: title
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/improvado-openapi.yml#POST /api/v3/extracts/{id}/run
+    - openapi/_original/improvado-openapi.yml#PUT /api/v3/loads/{id}/run
